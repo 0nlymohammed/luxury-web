@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# live, editable content — data/site.seed.json stays tracked as the initial seed
+/data/site.json
+/data/news.json
+
+# admin-uploaded news cover images
+/public/uploads/*
+!/public/uploads/.gitkeep

@@ -1,0 +1,722 @@
+{
+  "fields": {
+    "nav.1": {
+      "ar": "الرئيسية",
+      "en": "Home",
+      "section": "nav"
+    },
+    "nav.2": {
+      "ar": "من نحن",
+      "en": "About",
+      "section": "nav"
+    },
+    "nav.3": {
+      "ar": "خدماتنا",
+      "en": "Services",
+      "section": "nav"
+    },
+    "nav.4": {
+      "ar": "مشاريعنا",
+      "en": "Work",
+      "section": "nav"
+    },
+    "nav.5": {
+      "ar": "القطاعات",
+      "en": "Sectors",
+      "section": "nav"
+    },
+    "nav.6": {
+      "ar": "تواصل",
+      "en": "Contact",
+      "section": "nav"
+    },
+    "nav.7": {
+      "ar": "ابدأ الآن",
+      "en": "Get Started",
+      "section": "nav"
+    },
+    "hero.1": {
+      "ar": "نصنع التقنية",
+      "en": "We engineer technology",
+      "section": "hero"
+    },
+    "hero.2": {
+      "ar": "نحمي المستقبل",
+      "en": "We secure the future",
+      "section": "hero"
+    },
+    "hero.3": {
+      "ar": "حلول تقنية متكاملة، أمن سيبراني متقدم، وذكاء اصطناعي يساعد المؤسسات على بناء مستقبل رقمي أكثر أماناً وكفاءة",
+      "en": "Integrated technology, advanced cybersecurity and artificial intelligence — helping organizations build a safer, more efficient digital future",
+      "section": "hero"
+    },
+    "hero.4": {
+      "ar": "اكتشف خدماتنا",
+      "en": "Explore Services",
+      "section": "hero"
+    },
+    "hero.5": {
+      "ar": "استكشف مشاريعنا",
+      "en": "View Work",
+      "section": "hero"
+    },
+    "hero.6": {
+      "ar": "مشاريع حكومية وخاصة",
+      "en": "Public & private projects",
+      "section": "hero"
+    },
+    "hero.7": {
+      "ar": "دعم فني ومراقبة على مدار الساعة",
+      "en": "24/7 support & monitoring",
+      "section": "hero"
+    },
+    "about.1": {
+      "ar": "من نحن",
+      "en": "About Us",
+      "section": "about"
+    },
+    "about.2": {
+      "ar": "نبني الأنظمة التي تُنظّم العمل وتحمي البيانات",
+      "en": "We build the systems that organize work and protect data",
+      "section": "about"
+    },
+    "about.3": {
+      "ar": "الفخامة (LUXURY) شركة عراقية مقرها بغداد، متخصصة في تكنولوجيا المعلومات، الأمن السيبراني، تطوير البرمجيات، البنية التحتية التقنية والذكاء الاصطناعي. نعمل مع المؤسسات الحكومية والخاصة لبناء أنظمة موثوقة وآمنة قابلة للتوسّع",
+      "en": "LUXURY is a Baghdad-based Iraqi technology company specialized in IT, cybersecurity, software development, infrastructure and AI. We work with public and private institutions to build reliable, secure and scalable systems",
+      "section": "about"
+    },
+    "services.1": {
+      "ar": "خدماتنا",
+      "en": "Services",
+      "section": "services"
+    },
+    "services.2": {
+      "ar": "حلول تقنية مصمّمة للأعمال",
+      "en": "Technology solutions built for business",
+      "section": "services"
+    },
+    "services.3": {
+      "ar": "خمسة مجالات أساسية تغطّي دورة حياة أنظمتك — من التطوير إلى الحماية والدعم",
+      "en": "Five core domains covering the full lifecycle of your systems — from development to protection and support",
+      "section": "services"
+    },
+    "security.1": {
+      "ar": "الأمن السيبراني",
+      "en": "Cybersecurity",
+      "section": "security"
+    },
+    "security.2": {
+      "ar": "الأمن ليس خياراً. بل جزءٌ من البنية الأساسية",
+      "en": "Security is not an option. It is infrastructure",
+      "section": "security"
+    },
+    "security.3": {
+      "ar": "نبني الحماية داخل الأنظمة منذ لحظة تصميمها — من الشبكات والخوادم إلى قواعد البيانات وصلاحيات الوصول",
+      "en": "We build protection into systems from the moment they're designed — from networks and servers to databases and access control",
+      "section": "security"
+    },
+    "ai.1": {
+      "ar": "ذكاء اصطناعي مصمَّم لأعمالك",
+      "en": "Artificial intelligence, built for your business",
+      "section": "ai"
+    },
+    "ai.2": {
+      "ar": "نطوّر حلول ذكاء اصطناعي مخصصة لتحليل البيانات، أتمتة العمليات، وبناء أنظمة ذكية تدعم اتخاذ القرار داخل المؤسسة",
+      "en": "We develop customized AI solutions for data analysis, process automation and intelligent systems that support decision-making",
+      "section": "ai"
+    },
+    "ai.3": {
+      "ar": "اكتشف حلول الذكاء الاصطناعي",
+      "en": "Discover AI Solutions",
+      "section": "ai"
+    },
+    "work.1": {
+      "ar": "مشاريعنا",
+      "en": "Selected Work",
+      "section": "work"
+    },
+    "work.2": {
+      "ar": "مشاريع صنعت فرقاً",
+      "en": "Projects that made a difference",
+      "section": "work"
+    },
+    "why.1": {
+      "ar": "لماذا الفخامة",
+      "en": "Why Luxury",
+      "section": "why"
+    },
+    "why.2": {
+      "ar": "شريك تقني يمكنك الوثوق به",
+      "en": "A technology partner you can trust",
+      "section": "why"
+    },
+    "sectors.1": {
+      "ar": "القطاعات",
+      "en": "Sectors",
+      "section": "sectors"
+    },
+    "sectors.2": {
+      "ar": "نخدم القطاعات التي تعتمد على التقنية",
+      "en": "We serve the sectors that run on technology",
+      "section": "sectors"
+    },
+    "process.1": {
+      "ar": "كيف نعمل",
+      "en": "How We Work",
+      "section": "process"
+    },
+    "process.2": {
+      "ar": "من الفكرة إلى نظام آمن يعمل",
+      "en": "From idea to a secure system in production",
+      "section": "process"
+    },
+    "contact.1": {
+      "ar": "تواصل معنا",
+      "en": "Contact",
+      "section": "contact"
+    },
+    "contact.2": {
+      "ar": "لنبنِ الحل المناسب لأعمالك",
+      "en": "Let's build the right solution for your business",
+      "section": "contact"
+    },
+    "contact.3": {
+      "ar": "هل لديك مشروع تقني، نظام يحتاج إلى تطوير، أو بيئة تحتاج إلى حماية؟ دعنا نتحدث",
+      "en": "Have a technology project, a system to build, or an environment to protect? Let's talk",
+      "section": "contact"
+    },
+    "contact.4": {
+      "ar": "العراق — بغداد — شارع الأميرات",
+      "en": "Iraq — Baghdad — Al-Amirat Street",
+      "section": "contact"
+    },
+    "contact.5": {
+      "ar": "التواصل عبر النموذج",
+      "en": "Reach us via the form",
+      "section": "contact"
+    },
+    "contact.6": {
+      "ar": "الاسم",
+      "en": "Name",
+      "section": "contact"
+    },
+    "contact.7": {
+      "ar": "الشركة",
+      "en": "Company",
+      "section": "contact"
+    },
+    "contact.8": {
+      "ar": "الهاتف",
+      "en": "Phone",
+      "section": "contact"
+    },
+    "contact.9": {
+      "ar": "الخدمة",
+      "en": "Service",
+      "section": "contact"
+    },
+    "contact.10": {
+      "ar": "رسالتك",
+      "en": "Message",
+      "section": "contact"
+    },
+    "contact.11": {
+      "ar": "إرسال الطلب",
+      "en": "Send Request",
+      "section": "contact"
+    },
+    "footer.1": {
+      "ar": "شركة الفخامة لتكنولوجيا المعلومات والأمن السيبراني والحلول الذكية والذكاء الاصطناعي — بغداد، العراق",
+      "en": "LUXURY — Information Technology, Cybersecurity, Smart Solutions & AI. Baghdad, Iraq",
+      "section": "footer"
+    },
+    "footer.2": {
+      "ar": "روابط",
+      "en": "Navigate",
+      "section": "footer"
+    },
+    "footer.3": {
+      "ar": "من نحن",
+      "en": "About",
+      "section": "footer"
+    },
+    "footer.4": {
+      "ar": "خدماتنا",
+      "en": "Services",
+      "section": "footer"
+    },
+    "footer.5": {
+      "ar": "مشاريعنا",
+      "en": "Work",
+      "section": "footer"
+    },
+    "footer.6": {
+      "ar": "القطاعات",
+      "en": "Sectors",
+      "section": "footer"
+    },
+    "footer.7": {
+      "ar": "خدماتنا",
+      "en": "Services",
+      "section": "footer"
+    },
+    "footer.8": {
+      "ar": "تطوير الأنظمة",
+      "en": "Systems",
+      "section": "footer"
+    },
+    "footer.9": {
+      "ar": "الأمن السيبراني",
+      "en": "Cybersecurity",
+      "section": "footer"
+    },
+    "footer.10": {
+      "ar": "الذكاء الاصطناعي",
+      "en": "AI Solutions",
+      "section": "footer"
+    },
+    "footer.11": {
+      "ar": "البنية التحتية",
+      "en": "Infrastructure",
+      "section": "footer"
+    },
+    "footer.12": {
+      "ar": "تواصل",
+      "en": "Contact",
+      "section": "footer"
+    },
+    "footer.13": {
+      "ar": "بغداد — شارع الأميرات",
+      "en": "Baghdad — Al-Amirat St",
+      "section": "footer"
+    },
+    "footer.14": {
+      "ar": "جميع الحقوق محفوظة",
+      "en": "All rights reserved",
+      "section": "footer"
+    },
+    "news.1": {
+      "ar": "آخر الأخبار",
+      "en": "Latest News",
+      "section": "news"
+    },
+    "news.2": {
+      "ar": "جديدنا وتحديثاتنا",
+      "en": "Our latest news and updates",
+      "section": "news"
+    },
+    "news.3": {
+      "ar": "جميع الأخبار",
+      "en": "All News",
+      "section": "news"
+    }
+  },
+  "plain": {
+    "contact.email": "info@luxury-it.iq",
+    "footer.email": "info@luxury-it.iq",
+    "footer.tagline": "TECHNOLOGY · SECURITY · INTELLIGENCE",
+    "footer.copyrightPrefix": "© 2026 LUXURY"
+  },
+  "arrays": {
+    "services": [
+      {
+        "ic": "code",
+        "n": "01",
+        "ar": "تطوير الأنظمة والبرمجيات",
+        "en": "Systems & Software",
+        "dAr": "أنظمة إدارية ومالية وحلول برمجية مخصصة تُنظّم عمل المؤسسة بالكامل",
+        "dEn": "Administrative, financial and fully-custom software that organizes how your institution operates",
+        "ia": [
+          "أنظمة إدارية ومالية",
+          "CRM والأرشفة الإلكترونية",
+          "قواعد البيانات والصلاحيات",
+          "أتمتة العمليات والتكامل"
+        ],
+        "ie": [
+          "Admin & financial systems",
+          "CRM & e-archiving",
+          "Databases & permissions",
+          "Automation & integration"
+        ]
+      },
+      {
+        "ic": "shield",
+        "n": "02",
+        "ar": "الأمن السيبراني والحماية الرقمية",
+        "en": "Cybersecurity",
+        "dAr": "حماية الشبكات والخوادم والمواقع وقواعد البيانات، ومراقبة الأنظمة واكتشاف المخاطر",
+        "dEn": "Protecting networks, servers, sites and databases — monitoring systems and detecting risks early",
+        "ia": [
+          "حماية الشبكات والخوادم",
+          "اختبار الثغرات والمراقبة",
+          "النسخ الاحتياطي والاستعادة",
+          "إدارة صلاحيات الوصول"
+        ],
+        "ie": [
+          "Network & server security",
+          "Pen-testing & monitoring",
+          "Backup & recovery",
+          "Access control"
+        ]
+      },
+      {
+        "ic": "monitor",
+        "n": "03",
+        "ar": "المواقع والخدمات الرقمية",
+        "en": "Websites & Digital",
+        "dAr": "مواقع وبوابات إلكترونية آمنة وسريعة، مع إدارة وتأمين ودعم فني مستمر",
+        "dEn": "Fast, secure websites and portals — with management, protection and continuous support",
+        "ia": [
+          "تصميم وتطوير المواقع",
+          "البوابات الإلكترونية",
+          "الاستضافة والربط",
+          "الصيانة والدعم الفني"
+        ],
+        "ie": [
+          "Website design & build",
+          "Digital portals",
+          "Hosting & integration",
+          "Maintenance & support"
+        ]
+      },
+      {
+        "ic": "cpu",
+        "n": "04",
+        "ar": "الذكاء الاصطناعي والحلول الذكية",
+        "en": "AI & Smart Solutions",
+        "dAr": "حلول ذكاء اصطناعي مخصصة لتحليل البيانات وأتمتة العمليات ودعم اتخاذ القرار",
+        "dEn": "Customized AI for data analysis, process automation and decision support",
+        "ia": [
+          "تحليل وإدارة البيانات",
+          "أتمتة العمليات",
+          "أنظمة ذكية مخصصة",
+          "حلول مدعومة بالذكاء"
+        ],
+        "ie": [
+          "Data analysis & management",
+          "Process automation",
+          "Custom intelligent systems",
+          "AI-powered solutions"
+        ]
+      },
+      {
+        "ic": "server",
+        "n": "05",
+        "ar": "البنية التحتية والدعم الفني",
+        "en": "Infrastructure & Support",
+        "dAr": "بناء وربط البيئة التقنية للمؤسسة — من الأجهزة والشبكات إلى تنصيب الأنظمة وإدارة الأعطال",
+        "dEn": "Building and connecting your technical environment — hardware, networks, setup and incident management",
+        "ia": [
+          "Hardware & Software",
+          "الشبكات الداخلية",
+          "تنصيب وربط الأنظمة",
+          "إدارة الأعطال والبيئة"
+        ],
+        "ie": [
+          "Hardware & software",
+          "Internal networks",
+          "System install & integration",
+          "Incident & environment mgmt"
+        ]
+      }
+    ],
+    "sec": [
+      {
+        "ic": "search",
+        "ar": "اكتشاف المخاطر",
+        "en": "Threat detection",
+        "dAr": "مراقبة مستمرة واكتشاف مبكر للتهديدات",
+        "dEn": "Continuous monitoring and early threat detection"
+      },
+      {
+        "ic": "shield",
+        "ar": "حماية الشبكات",
+        "en": "Network security",
+        "dAr": "تأمين الشبكات والخوادم والمواقع",
+        "dEn": "Securing networks, servers and websites"
+      },
+      {
+        "ic": "lock",
+        "ar": "حماية البيانات",
+        "en": "Data protection",
+        "dAr": "تشفير قواعد البيانات وإدارة الوصول",
+        "dEn": "Database encryption and access control"
+      },
+      {
+        "ic": "refresh",
+        "ar": "النسخ والاستعادة",
+        "en": "Backup & recovery",
+        "dAr": "نسخ احتياطي منتظم واستعادة موثوقة",
+        "dEn": "Regular backups and reliable recovery"
+      }
+    ],
+    "ai": [
+      {
+        "ic": "chart",
+        "ar": "تحليل البيانات",
+        "en": "Data analysis",
+        "dAr": "تحويل البيانات إلى رؤى قابلة للتنفيذ",
+        "dEn": "Turning data into actionable insight"
+      },
+      {
+        "ic": "refresh",
+        "ar": "أتمتة العمليات",
+        "en": "Process automation",
+        "dAr": "أتمتة المهام المتكررة وتوفير الوقت",
+        "dEn": "Automating repetitive tasks to save time"
+      },
+      {
+        "ic": "cpu",
+        "ar": "أنظمة ذكية",
+        "en": "Intelligent systems",
+        "dAr": "حلول ذكية مبنية حول احتياجك",
+        "dEn": "Smart solutions built around your needs"
+      },
+      {
+        "ic": "badge",
+        "ar": "دعم القرار",
+        "en": "Decision support",
+        "dAr": "أنظمة تدعم اتخاذ قرار أفضل وأسرع",
+        "dEn": "Systems that support better, faster decisions"
+      }
+    ],
+    "work": [
+      {
+        "ic": "filecheck",
+        "ar": "نظام مركز تقديم الفيزا الصربي — بغداد",
+        "en": "Serbian Visa Center System — Baghdad",
+        "g": "Gov · System",
+        "dAr": "نظام إلكتروني لإدارة الطلبات والبيانات والمواعيد والعمليات الفنية والإدارية",
+        "dEn": "An electronic system managing applications, data, appointments and technical/administrative operations"
+      },
+      {
+        "ic": "users",
+        "ar": "CRM لشركة الفخامة للسفر والسياحة",
+        "en": "CRM — Luxury Travel & Tourism",
+        "g": "CRM · Platform",
+        "dAr": "منصة CRM متكاملة لإدارة العملاء والطلبات والعمليات والتقارير الإدارية",
+        "dEn": "An integrated CRM platform for customers, requests, operations and reporting"
+      },
+      {
+        "ic": "bars",
+        "ar": "نظام إدارة بيانات المرشحين للانتخابات",
+        "en": "Electoral Candidate Data System",
+        "g": "Data · Analytics",
+        "dAr": "منصة متخصصة لبيانات المرشحين والدوائر الانتخابية وتحليل البيانات ودعم القرار",
+        "dEn": "A specialized platform for candidate data, districts, analytics and decision support"
+      },
+      {
+        "ic": "archive",
+        "ar": "نظام الأرشفة الإلكترونية — شركة كرم الصادق",
+        "en": "Electronic Archiving — Karam Al-Sadiq",
+        "g": "Archive · Secure",
+        "dAr": "نظام أرشفة رقمية للوثائق والملفات مع بحث واسترجاع وإدارة بيانات آمنة",
+        "dEn": "A digital archive with search, retrieval and secure data management"
+      },
+      {
+        "ic": "globe",
+        "ar": "إدارة وحماية المواقع الإلكترونية",
+        "en": "Website Management & Protection",
+        "g": "Web · Security",
+        "dAr": "إدارة وصيانة وتأمين المواقع مع دعم فني ومراقبة أداء مستمرة",
+        "dEn": "Website management, security, support and continuous performance monitoring"
+      }
+    ],
+    "why": [
+      {
+        "ic": "users",
+        "ar": "كوادر متخصصة",
+        "en": "Specialized talent",
+        "dAr": "مهندسو أنظمة وخبراء أمن سيبراني ومطورون",
+        "dEn": "System engineers, security experts and developers"
+      },
+      {
+        "ic": "badge",
+        "ar": "خبرة تقنية",
+        "en": "Technical experience",
+        "dAr": "خبرة عملية في المشاريع الحكومية والخاصة",
+        "dEn": "Hands-on experience across public & private projects"
+      },
+      {
+        "ic": "blocks",
+        "ar": "حلول مخصصة",
+        "en": "Tailored solutions",
+        "dAr": "نبني الحل حول احتياج المؤسسة، لا العكس",
+        "dEn": "We build the solution around your needs"
+      },
+      {
+        "ic": "zap",
+        "ar": "سرعة الاستجابة",
+        "en": "Fast response",
+        "dAr": "دعم فني سريع وإدارة أعطال فعّالة",
+        "dEn": "Rapid support and effective incident handling"
+      },
+      {
+        "ic": "trend",
+        "ar": "أنظمة قابلة للتوسّع",
+        "en": "Scalable systems",
+        "dAr": "حلول تنمو مع أعمالك دون إعادة بناء",
+        "dEn": "Solutions that grow with you — no rebuilds"
+      },
+      {
+        "ic": "lock",
+        "ar": "حماية البيانات",
+        "en": "Data protection",
+        "dAr": "الأمن مدمج في كل نظام نبنيه",
+        "dEn": "Security embedded in every system we build"
+      }
+    ],
+    "sectors": [
+      {
+        "ic": "building",
+        "ar": "الشركات التجارية",
+        "en": "Commercial"
+      },
+      {
+        "ic": "plane",
+        "ar": "السفر والسياحة",
+        "en": "Travel & Tourism"
+      },
+      {
+        "ic": "utensils",
+        "ar": "المطاعم والخدمات",
+        "en": "Hospitality"
+      },
+      {
+        "ic": "briefcase",
+        "ar": "المؤسسات الخاصة",
+        "en": "Private sector"
+      },
+      {
+        "ic": "chart",
+        "ar": "المشاريع الاستثمارية",
+        "en": "Investment"
+      },
+      {
+        "ic": "landmark",
+        "ar": "المراكز الإدارية",
+        "en": "Administrative"
+      },
+      {
+        "ic": "circuit",
+        "ar": "المؤسسات التقنية",
+        "en": "Technology"
+      },
+      {
+        "ic": "refresh",
+        "ar": "التحول الرقمي",
+        "en": "Digital transformation"
+      }
+    ],
+    "proc": [
+      {
+        "ic": "search",
+        "ar": [
+          "نفهم",
+          "نفهم احتياجات المؤسسة"
+        ],
+        "en": [
+          "Understand",
+          "We understand your needs"
+        ]
+      },
+      {
+        "ic": "chart",
+        "ar": [
+          "نحلل",
+          "نحلل البيئة التقنية والعمليات"
+        ],
+        "en": [
+          "Analyze",
+          "We analyze systems & operations"
+        ]
+      },
+      {
+        "ic": "pen",
+        "ar": [
+          "نصمم",
+          "نصمم الحل المناسب"
+        ],
+        "en": [
+          "Design",
+          "We design the right solution"
+        ]
+      },
+      {
+        "ic": "code",
+        "ar": [
+          "نبني",
+          "نطوّر النظام أو الحل"
+        ],
+        "en": [
+          "Build",
+          "We develop the system"
+        ]
+      },
+      {
+        "ic": "shield",
+        "ar": [
+          "نؤمّن",
+          "نؤمّن الأنظمة والبيانات"
+        ],
+        "en": [
+          "Secure",
+          "We secure systems & data"
+        ]
+      },
+      {
+        "ic": "rocket",
+        "ar": [
+          "ننشر",
+          "ننشر الحل ونربطه بالبيئة"
+        ],
+        "en": [
+          "Deploy",
+          "We deploy & integrate it"
+        ]
+      },
+      {
+        "ic": "headset",
+        "ar": [
+          "ندعم",
+          "نستمر في الدعم والتطوير"
+        ],
+        "en": [
+          "Support",
+          "We keep supporting & evolving"
+        ]
+      }
+    ],
+    "about": [
+      {
+        "ic": "code",
+        "ar": "التقنية",
+        "en": "Technology",
+        "dAr": "أنظمة وبرمجيات مخصصة",
+        "dEn": "Custom systems & software"
+      },
+      {
+        "ic": "shield",
+        "ar": "الأمن السيبراني",
+        "en": "Cybersecurity",
+        "dAr": "حماية رقمية متقدمة",
+        "dEn": "Advanced digital protection"
+      },
+      {
+        "ic": "cpu",
+        "ar": "الذكاء الاصطناعي",
+        "en": "AI",
+        "dAr": "حلول ذكية للبيانات",
+        "dEn": "Intelligent data solutions"
+      },
+      {
+        "ic": "refresh",
+        "ar": "التحول الرقمي",
+        "en": "Transformation",
+        "dAr": "أتمتة وتطوير المؤسسات",
+        "dEn": "Automation & modernization"
+      }
+    ]
+  },
+  "updatedAt": "2026-09-13T11:31:55.820Z"
+}
