@@ -8,6 +8,10 @@ import NewsEditor from "./NewsEditor";
 
 type ArrayItem = Record<string, unknown>;
 
+const INPUT =
+  "rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-[#0b1836] placeholder:text-slate-400 outline-none transition-colors focus:border-[#2365fa] focus:ring-2 focus:ring-[#2365fa]/20";
+const LABEL = "text-sm font-medium text-[#0b1836]";
+
 function cloneSite(site: SiteContent): SiteContent {
   return JSON.parse(JSON.stringify(site));
 }
@@ -35,10 +39,10 @@ function ItemFieldInput({
 
   if (itemKey === "ic") {
     return (
-      <label className="flex flex-col gap-1 text-sm">
-        <span className="font-medium text-slate-700">{label}</span>
+      <label className={`flex flex-col gap-1.5 ${LABEL}`}>
+        <span>{label}</span>
         <select
-          className="rounded-md border border-slate-300 px-2 py-1.5 text-sm"
+          className={INPUT}
           value={String(value ?? "")}
           onChange={(e) => onChange(e.target.value)}
         >
@@ -57,20 +61,18 @@ function ItemFieldInput({
     const arr = value as string[];
     const dir = itemKey === "ar" ? "rtl" : "ltr";
     return (
-      <div className="flex flex-col gap-1 text-sm">
-        <span className="font-medium text-slate-700">
-          {itemKey === "ar" ? "Arabic" : "English"}
-        </span>
+      <div className={`flex flex-col gap-1.5 ${LABEL}`}>
+        <span>{itemKey === "ar" ? "Arabic" : "English"}</span>
         <input
           dir={dir}
-          className="rounded-md border border-slate-300 px-2 py-1.5 text-sm"
+          className={INPUT}
           placeholder="Title"
           value={arr[0] ?? ""}
           onChange={(e) => onChange([e.target.value, arr[1] ?? ""])}
         />
         <input
           dir={dir}
-          className="rounded-md border border-slate-300 px-2 py-1.5 text-sm"
+          className={INPUT}
           placeholder="Description"
           value={arr[1] ?? ""}
           onChange={(e) => onChange([arr[0] ?? "", e.target.value])}
@@ -84,12 +86,12 @@ function ItemFieldInput({
     const arr = value as string[];
     const dir = itemKey === "ia" ? "rtl" : "ltr";
     return (
-      <label className="flex flex-col gap-1 text-sm">
-        <span className="font-medium text-slate-700">{label}</span>
+      <label className={`flex flex-col gap-1.5 ${LABEL}`}>
+        <span>{label}</span>
         <textarea
           dir={dir}
           rows={4}
-          className="rounded-md border border-slate-300 px-2 py-1.5 text-sm"
+          className={INPUT}
           value={arr.join("\n")}
           onChange={(e) => onChange(e.target.value.split("\n"))}
         />
@@ -101,20 +103,20 @@ function ItemFieldInput({
   const long = itemKey === "dAr" || itemKey === "dEn" || itemKey === "ar" || itemKey === "en";
 
   return (
-    <label className="flex flex-col gap-1 text-sm">
-      <span className="font-medium text-slate-700">{label}</span>
+    <label className={`flex flex-col gap-1.5 ${LABEL}`}>
+      <span>{label}</span>
       {long ? (
         <textarea
           dir={dir}
           rows={2}
-          className="rounded-md border border-slate-300 px-2 py-1.5 text-sm"
+          className={INPUT}
           value={String(value ?? "")}
           onChange={(e) => onChange(e.target.value)}
         />
       ) : (
         <input
           dir={dir}
-          className="rounded-md border border-slate-300 px-2 py-1.5 text-sm"
+          className={INPUT}
           value={String(value ?? "")}
           onChange={(e) => onChange(e.target.value)}
         />
@@ -164,18 +166,18 @@ function ArrayEditor({
           (a, b) => (KEY_ORDER.indexOf(a) === -1 ? 99 : KEY_ORDER.indexOf(a)) - (KEY_ORDER.indexOf(b) === -1 ? 99 : KEY_ORDER.indexOf(b))
         );
         return (
-          <div key={idx} className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
-            <div className="mb-3 flex items-center justify-between">
-              <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+          <div key={idx} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div className="mb-4 flex items-center justify-between border-b border-slate-100 pb-3">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#71809f]">
                 Item {idx + 1}
               </span>
               <div className="flex gap-2">
-                <button type="button" onClick={() => move(idx, -1)} className="rounded border border-slate-300 px-2 py-1 text-xs hover:bg-slate-50">↑</button>
-                <button type="button" onClick={() => move(idx, 1)} className="rounded border border-slate-300 px-2 py-1 text-xs hover:bg-slate-50">↓</button>
-                <button type="button" onClick={() => remove(idx)} className="rounded border border-red-300 px-2 py-1 text-xs text-red-600 hover:bg-red-50">Remove</button>
+                <button type="button" onClick={() => move(idx, -1)} className="rounded-md border border-slate-300 px-2.5 py-1 text-xs font-medium text-[#0b1836] hover:bg-slate-50">↑</button>
+                <button type="button" onClick={() => move(idx, 1)} className="rounded-md border border-slate-300 px-2.5 py-1 text-xs font-medium text-[#0b1836] hover:bg-slate-50">↓</button>
+                <button type="button" onClick={() => remove(idx)} className="rounded-md border border-red-200 px-2.5 py-1 text-xs font-medium text-red-600 hover:bg-red-50">Remove</button>
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {keys.map((k) => (
                 <div key={k} className={k === "ia" || k === "ie" || k === "dAr" || k === "dEn" ? "sm:col-span-2" : ""}>
                   <ItemFieldInput itemKey={k} value={item[k]} onChange={(v) => updateItem(idx, k, v)} />
@@ -188,7 +190,7 @@ function ArrayEditor({
       <button
         type="button"
         onClick={add}
-        className="self-start rounded-md border border-dashed border-slate-300 px-4 py-2 text-sm font-medium text-slate-600 hover:border-blue-400 hover:text-blue-600"
+        className="self-start rounded-lg border border-dashed border-slate-300 px-4 py-2.5 text-sm font-semibold text-[#48577a] transition-colors hover:border-[#2365fa] hover:text-[#2365fa]"
       >
         + Add item
       </button>
@@ -248,7 +250,7 @@ export default function Dashboard({
         body: JSON.stringify(body),
       });
       if (!res.ok) throw new Error("Save failed");
-      setMessage("Saved. Changes are live on the site.");
+      setMessage("Saved — live on the site now.");
     } catch {
       setMessage("Something went wrong while saving. Please try again.");
     } finally {
@@ -265,18 +267,23 @@ export default function Dashboard({
   const fieldKeys = tab?.section ? fieldKeysForSection(site, tab.section) : [];
 
   return (
-    <div className="flex min-h-screen bg-slate-50">
-      <aside className="w-64 shrink-0 border-e border-slate-200 bg-white p-4">
-        <div className="mb-6 flex items-center justify-between">
-          <span className="text-lg font-bold text-slate-900">LUXURY Admin</span>
+    <div className="flex min-h-screen bg-[#f4f7fc]">
+      <aside className="flex w-64 shrink-0 flex-col bg-[#020e30] p-4">
+        <div className="mb-8 flex items-center gap-1 px-2 pt-2 font-extrabold tracking-tight">
+          <span className="text-lg text-white">LU</span>
+          <span className="text-lg text-[#31b1fb]">X</span>
+          <span className="text-lg text-white">URY</span>
+          <span className="ms-1 text-xs font-semibold uppercase tracking-wider text-[#7688b0]">Admin</span>
         </div>
-        <nav className="flex flex-col gap-1">
+        <nav className="flex flex-1 flex-col gap-0.5 overflow-y-auto">
           {TABS.map((t) => (
             <button
               key={t.key}
               onClick={() => setActiveTab(t.key)}
-              className={`rounded-md px-3 py-2 text-start text-sm font-medium transition-colors ${
-                t.key === activeTab ? "bg-blue-600 text-white" : "text-slate-600 hover:bg-slate-100"
+              className={`rounded-lg px-3 py-2 text-start text-sm font-medium transition-colors ${
+                t.key === activeTab
+                  ? "bg-[#2365fa] text-white shadow-[0_6px_16px_-6px_rgba(35,101,250,0.7)]"
+                  : "text-[#b7c2e0] hover:bg-white/5 hover:text-white"
               }`}
             >
               {t.label}
@@ -285,8 +292,10 @@ export default function Dashboard({
           <button
             key="news-articles"
             onClick={() => setActiveTab("news-articles")}
-            className={`mt-2 rounded-md border-t border-slate-200 px-3 py-2 pt-3 text-start text-sm font-medium transition-colors ${
-              activeTab === "news-articles" ? "bg-blue-600 text-white" : "text-slate-600 hover:bg-slate-100"
+            className={`mt-3 rounded-lg border-t border-white/10 px-3 py-2 pt-4 text-start text-sm font-medium transition-colors ${
+              activeTab === "news-articles"
+                ? "bg-[#2365fa] text-white shadow-[0_6px_16px_-6px_rgba(35,101,250,0.7)]"
+                : "text-[#b7c2e0] hover:bg-white/5 hover:text-white"
             }`}
           >
             News Articles
@@ -294,7 +303,7 @@ export default function Dashboard({
         </nav>
         <button
           onClick={logout}
-          className="mt-8 w-full rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100"
+          className="mt-4 w-full rounded-lg border border-white/15 px-3 py-2 text-sm font-medium text-[#b7c2e0] transition-colors hover:bg-white/5 hover:text-white"
         >
           Log out
         </button>
@@ -306,13 +315,13 @@ export default function Dashboard({
         ) : (
           <>
             <div className="mb-6 flex items-center justify-between">
-              <h1 className="text-2xl font-bold text-slate-900">{tab.label}</h1>
+              <h1 className="text-2xl font-bold text-[#0b1836]">{tab.label}</h1>
               <div className="flex items-center gap-3">
-                {message && <span className="text-sm text-slate-500">{message}</span>}
+                {message && <span className="text-sm text-[#48577a]">{message}</span>}
                 <button
                   onClick={save}
                   disabled={saving}
-                  className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 disabled:opacity-50"
+                  className="rounded-lg bg-[#2365fa] px-4 py-2 text-sm font-semibold text-white shadow-[0_10px_24px_-10px_rgba(35,101,250,0.7)] transition-colors hover:bg-[#1a4fd4] disabled:opacity-50"
                 >
                   {saving ? "Saving…" : "Save changes"}
                 </button>
@@ -321,29 +330,29 @@ export default function Dashboard({
 
             <div className="flex flex-col gap-6">
               {fieldKeys.length > 0 && (
-                <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
-                  <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-400">
+                <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <h2 className="mb-5 text-xs font-bold uppercase tracking-wider text-[#71809f]">
                     Text content
                   </h2>
                   <div className="flex flex-col gap-5">
                     {fieldKeys.map((key) => (
-                      <div key={key} className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                        <label className="flex flex-col gap-1 text-sm">
-                          <span className="font-medium text-slate-700">Arabic</span>
+                      <div key={key} className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <label className={`flex flex-col gap-1.5 ${LABEL}`}>
+                          <span>Arabic</span>
                           <textarea
                             dir="rtl"
                             rows={site.fields[key].ar.length > 60 ? 3 : 1}
-                            className="rounded-md border border-slate-300 px-2 py-1.5 text-sm"
+                            className={INPUT}
                             value={site.fields[key].ar}
                             onChange={(e) => updateField(key, "ar", e.target.value)}
                           />
                         </label>
-                        <label className="flex flex-col gap-1 text-sm">
-                          <span className="font-medium text-slate-700">English</span>
+                        <label className={`flex flex-col gap-1.5 ${LABEL}`}>
+                          <span>English</span>
                           <textarea
                             dir="ltr"
                             rows={site.fields[key].en.length > 60 ? 3 : 1}
-                            className="rounded-md border border-slate-300 px-2 py-1.5 text-sm"
+                            className={INPUT}
                             value={site.fields[key].en}
                             onChange={(e) => updateField(key, "en", e.target.value)}
                           />
@@ -355,17 +364,17 @@ export default function Dashboard({
               )}
 
               {tab.plainKeys && (
-                <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
-                  <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-400">
+                <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <h2 className="mb-5 text-xs font-bold uppercase tracking-wider text-[#71809f]">
                     Contact details
                   </h2>
                   <div className="flex flex-col gap-4">
                     {tab.plainKeys.map((p) => (
-                      <label key={p.key} className="flex flex-col gap-1 text-sm">
-                        <span className="font-medium text-slate-700">{p.label}</span>
+                      <label key={p.key} className={`flex flex-col gap-1.5 ${LABEL}`}>
+                        <span>{p.label}</span>
                         <input
                           dir="ltr"
-                          className="rounded-md border border-slate-300 px-2 py-1.5 text-sm"
+                          className={INPUT}
                           value={site.plain[p.key] ?? ""}
                           onChange={(e) => updatePlain(p.key, e.target.value)}
                         />
@@ -377,7 +386,7 @@ export default function Dashboard({
 
               {tab.arrayKey && (
                 <div>
-                  <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">
+                  <h2 className="mb-3 text-xs font-bold uppercase tracking-wider text-[#71809f]">
                     Repeating items
                   </h2>
                   <ArrayEditor

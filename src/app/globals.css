@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
+/* Admin tool + news pages are a single deliberate light theme — the public
+   site itself has its own standalone stylesheet and never touches this file.
+   Colors are pinned (not inherited from --foreground) so admin-panel text
+   never goes invisible under a dark OS preference. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --background: #f4f7fc;
+  --foreground: #0b1836;
 }
 
 @theme inline {
@@ -12,15 +17,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+[dir="rtl"] {
+  font-family: Tahoma, "Noto Kufi Arabic", var(--font-geist-sans), sans-serif;
 }
