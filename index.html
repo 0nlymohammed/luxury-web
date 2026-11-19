@@ -1,0 +1,811 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>LUXURY</title>
+<meta name="description" content="LUXURY — شركة الفخامة لتكنولوجيا المعلومات والأمن السيبراني. IT, cybersecurity, AI &amp; smart solutions. Baghdad, Iraq.">
+<style>
+/* =======================================================
+   LUXURY — clean corporate (light). Real icons, soft cards,
+   navy contrast footer/contact. Bilingual AR/EN + RTL.
+   ======================================================= */
+:root{
+  --bg:#ffffff; --soft:#f4f7fc; --soft-2:#eaf0f9;
+  --navy:#020e30; --navy-1:#061a45;
+  --ink:#0b1836;            /* headings */
+  --body:#48577a;           /* body text */
+  --mut:#71809f;            /* muted */
+  --blue:#2365fa; --blue-d:#1a4fd4; --cyan:#31b1fb;
+  --tint:rgba(35,101,250,.08);
+  --tint-2:rgba(35,101,250,.14);
+  --ok:#12a150; --ok-bg:rgba(18,161,80,.12);
+  --line:#e5eaf3; --line-2:#d3dcec;
+  --sh-sm:0 1px 2px rgba(11,24,54,.06);
+  --sh:0 6px 24px -10px rgba(11,24,54,.16);
+  --sh-lg:0 24px 60px -24px rgba(11,24,54,.28);
+  --maxw:1200px; --gut:clamp(18px,5vw,56px);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --fdisp:"Archivo","Inter","Segoe UI",system-ui,-apple-system,sans-serif;
+  --fbody:"Inter","Segoe UI",system-ui,-apple-system,sans-serif;
+  --fmono:"SF Mono","JetBrains Mono",ui-monospace,"Consolas",monospace;
+  --far:"Tahoma","Segoe UI","Noto Kufi Arabic",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--body);font-family:var(--fbody);font-size:16.5px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+[dir="rtl"] body,[dir="rtl"]{font-family:var(--far)}
+[dir="rtl"] .lat{font-family:var(--fbody)}
+[dir="rtl"] .disp{font-family:var(--far)}
+::selection{background:var(--blue);color:#fff}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+.disp{font-family:var(--fdisp);font-weight:800;letter-spacing:-.02em;line-height:1.05;color:var(--ink);text-wrap:balance}
+[dir="rtl"] .disp{letter-spacing:0;line-height:1.25}
+.mono{font-family:var(--fmono);font-feature-settings:"tnum"}
+
+/* ---------- layout ---------- */
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
+section{padding:clamp(64px,9vw,116px) 0}
+.eyebrow{display:none}
+.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:var(--blue)}
+[dir="rtl"] .eyebrow{letter-spacing:.04em}
+h2.head{font-family:var(--fdisp);font-weight:800;color:var(--ink);font-size:clamp(28px,4vw,48px);letter-spacing:-.02em;
+  line-height:1.06;text-wrap:balance;max-width:22ch}
+[dir="rtl"] h2.head{font-family:var(--far);letter-spacing:0;line-height:1.28}
+.sub{color:var(--mut);font-size:clamp(15.5px,1.4vw,18px);max-width:58ch;margin-top:16px}
+.center{text-align:center}
+.center .eyebrow::before{display:none}
+.center .eyebrow{gap:0}
+.center h2.head{margin-inline:auto}
+.center .sub{margin-inline:auto}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;cursor:pointer;border:1px solid transparent;
+  padding:14px 24px;border-radius:11px;transition:.25s var(--ease);white-space:nowrap}
+.btn svg{width:17px;height:17px}
+.btn .a{transition:transform .3s var(--ease)}
+[dir="rtl"] .btn .a{transform:scaleX(-1)}
+.btn:hover .a{transform:translateX(4px)}[dir="rtl"] .btn:hover .a{transform:scaleX(-1) translateX(4px)}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px -10px rgba(35,101,250,.7)}
+.btn-primary:hover{background:var(--blue-d);transform:translateY(-2px);box-shadow:0 16px 32px -12px rgba(35,101,250,.75)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line-2)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--navy)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+.btn-outline-l{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
+.btn-outline-l:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+/* ---------- icon tile ---------- */
+.tile{width:52px;height:52px;border-radius:13px;display:grid;place-items:center;flex:0 0 auto;
+  background:var(--tint);color:var(--blue);transition:.3s var(--ease)}
+.tile svg{width:26px;height:26px;stroke-width:2}
+.tile.solid{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;box-shadow:0 8px 20px -8px rgba(35,101,250,.6)}
+
+/* ---------- reveal ---------- */
+[data-rv]{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+[data-rv].in{opacity:1;transform:none}
+[data-rv][data-dl="1"]{transition-delay:.07s}[data-rv][data-dl="2"]{transition-delay:.14s}
+[data-rv][data-dl="3"]{transition-delay:.21s}[data-rv][data-dl="4"]{transition-delay:.28s}[data-rv][data-dl="5"]{transition-delay:.35s}
+/* staggered children reveal for grids */
+.stagger>*{opacity:0;transform:translateY(24px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.07s}
+.stagger.in>*:nth-child(3){transition-delay:.14s}
+.stagger.in>*:nth-child(4){transition-delay:.21s}
+.stagger.in>*:nth-child(5){transition-delay:.28s}
+.stagger.in>*:nth-child(6){transition-delay:.35s}
+.stagger.in>*:nth-child(7){transition-delay:.42s}
+@media(prefers-reduced-motion:reduce){[data-rv],.stagger>*{opacity:1;transform:none;transition:none}}
+
+/* ================= NAV ================= */
+.nav{position:fixed;inset:0 0 auto;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:16px var(--gut);transition:padding .35s var(--ease),background .35s,box-shadow .35s,border-color .35s;
+  border-bottom:1px solid transparent}
+.nav.stuck{padding:11px var(--gut);background:rgba(255,255,255,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);box-shadow:var(--sh-sm)}
+.brand{display:flex;align-items:center;gap:11px;color:var(--ink)}
+.brand svg{width:34px;height:34px}
+.brand .brand-mark{width:31px;height:34px;background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAAB4CAYAAAAXIRdAAAAZtElEQVR4nO2dXYxl2XXXf/+1z7m3qrvny1+xx/ZDIBAUoxAyxnICYWwgMR8SEkhjvoIlpIDjBxKQkCzlpd1GlpWESNggBEGJQA6JlRYxxC8GmYwHxUE2dsRDbMsmgGNjO/YwH57p7qp779nrz8M+59at7q7unuqu6qme+quO7q1zzj1n7732WnvttdbeS4/9+Eff9ezOq390iIcXS+Zk7yCuQOxaIllCF2fpu07LuCyXigk55ACQbFVjTAE5FBIKACNLZ7fOzIZSStVidma2+PLy2S/++Mfe/xefBAQYW0j+54//zrnffm72vm9p+83ZbT81LJZzFDHrOnJVc7Va5qzrwEjpsBWR2R7SSkMOrUh1SCE50wrLGGo1gcDgDNnjbwcgjQ1pCLANcjrTYDllUcGZdqsaDEAWlCnSBoux2iHJMKjmUzX9ZLr87tDf//H79c2nPvbD73pSb31iAOD8WPALSm4B3beHB7/vmdXrf/D53XNodpbVciA1p3RLoito6Ol0hroDw2wXlwoSEUIhJGESSWgQDrfzOV5zEjtCs56aCx4ql75r2/fdBzzZai3Ov+c9ugB+8qvDma/1Zx55+lWve9Nyd0U37wCTNaEDCnhVkYAInEbK9hiMHUgF0cqRCXa2djQYEQYbnI0qSlACLthu5xykkzBkHZ+drS6utfUvg1xaPT1SONuRNgytTUKFEiKiI1Jc3r30zR/+lff/2p951+w/z+4bPvOxC/q/AI+ed/fEBQ03JdgQZZfZtiPmNWNR5iWw5qRmSIZ5wR4oMxFdwUQjTjT+kNRaMsAyCsNISEmkgDCW3c3myqiXo6SvV5iXveKMt5fdCtJ9F7XzUNJQwuCg2q0MBhJa3wxkwK1BW0MmSSBVaP0XZ2KJyMCZKAIbQiJloOJsBGP9HCEE1sjFoqoQycilrb5KQRGZhpGAKj1OQ0La1NXSOcDu8MrvmM9e+y5x5V310nOfeeQnPndxZ/c3P/zEBX2Fx361cPHt49Ovj8ChpFPaxbJsZCMcMkVJyEimylarB4zn9o4cyTd9nw5D+53H32T0bI1vv6pYnj0VSZZUyLK88czpe4IYn4e18U4JhwBZUmr67V552XjO3vn919lXJ2kU2+v7IDa+7923r74wnpOskAlZEQoFXXjRediJeV3qVW9Mv/6nz+rPfeTRd/7O3+Di2ytgzp+Pgwl2y9Ct33rjxxzYe7rd+xSoHHzHyYYRGSlrt8OLoO5WhjN1MXzn9z9fX/+Lf/Lvfu6Db37ssW0uXMiDiPYCCHaK24dBQc2CYq5udq5cqSqrmYYr3Zmtp+vr/n489MGPvOOnvvJaLlxYC/1NHD/BfGP+aWPf8RXnWGEoKhT1iGAYjEuQJbvaLT305/zU7qvf9r++ef9H3/FTX3ntqA7twymHHSckXIGarFaJSxAzWNZKeiG6lZiZp4cH/viXvu5//dg//LntUcVdd+EjINgB7KG9Mt/5d54MBGAqsxL0XUemWS1hXgqzmCMPrGKH2md+O+//C1/+1p9+r5DPn+eICDaq8lpTh7V4063IubNNcbS5TbGo9Ttv/l6P9+jq0zdQs26tcPvagql9zJBLsOkttqiU1QqWhcCUbslSl6Tt++ugP/APfuhv/4+/euGC8tHzj3ccuUg0wLWNlkPcq6PUTdE0xUJk0FWY1YHeAwXIoWe13GK7P6tcmpUf7C7VrX/0vT/6L171BJ9Izp+PzvKxNJ7taUqznoa9FGEF4zyfaDYFkmaQiOjoLBaXkzkR0eew4BVvCr/pb3Lhjf8UHMeudNyzGuALgrAGHEvMjPQc0ca0zKQvwqpa5i6DHirL+tBfefTv/forQHmqJR4zhAgXUsmqJMtiaklSlaKKvCSKyVgxO1PKYncnSz74Q6y+883cdAwb7Sz7ThwClkb7X7NP1eEgPju78Z5rb9mnGujaa7dYmn2fvub89DyPRhnvO7v/OS+8PWQIG9OxjMKiX7LqdiF2CA/MSqEyUIu5slxotrVdS3lIl5761g+cP08EQs374H0P1Si+Ym0hu7ZS+woy0mCyeE/IMKtY4UhitLAdNIZduQyoA4FTyCKyyXkle98xMTZojEWLZlwcj0QYk82TwMa1ZprHqljtDquC6lh3EWmCJFghLRF17HSlGR/kdr8O04Gb5XqqQ5jxW2EYLf22KRTIjk6URV3AA6//y599/jMv6/YesZ/dojHE2NnNYVWTHJuvA4oFmRysdVxGmo8+q2xuEhmaA6BZ/idnlI0YrSLNZcXUTyYLrL3BCJvHmoNH59faeSAgCBK7EVGYVAdZxvZuqnpzKh0eciMWObp1CKyEFIXmOuqYkbVGpWa97w/+0acjHuhu9QXXF1I3R1+DyJ7eEAFmi92DKHYWynO7zOvArsxKgR2N+52tBAYymiunVX0sn/fNAzMSZ4dtgvEZayHXXBJ4Ojedbb602roMBqoC3E39dkSAyyFa48aQtO5HGydBMAzh3We/+l1HrnQI6HOPezPQ4oB7L1++zICoEtb6F/ACRwuvx59bLeFk/DE5GoJSQao0D9SG7JH3SHwUaF6hjRNuhMys0nDlDbfMYYdHBa2wOqQCWnCm27lufWd12wufzUUUSOi9GmX66B128wwzMcc4vE7KUTrJ0URhNz5pnBh7jbHBbRt+fnA28UshxSjIaWJRQIzeZSVohUjso2s+jyJ/chIPtaLQg0dOMCNy9FDXAKljd/eAmx8asnvKdZYwkNS1gtB4Zi2Tph4YapJy7QRoigqmqc6jMoJjFIGB3DTW6XMKHcBBWmMoAOQo8pRJqRqVoDaeKstatTkOSMK1UnruOwYOC5ImWlKgKLA1v/6tl6AMK80rDKrjOKQxJCNHTTRHv+8ox0Y7oNfKRhBuMTHKUTnJGJWQGAnqtdFyCgUIJys3wtmbinGgNDERurFfi+s49ETn1jHZQ2smady1IeJWjKSHhE2HoQY1YOaAAzisf/msDLsuQ+Cgdw52OJoWlW6NnWKtnnn8PsVSrBX5xNGCmIzRXhAGkaPmWWIdhEOtTb3H1EjSBWcTpJJxL4bVopmSuo5lzVFE5nqotD2NNUTEoQiptUK0pzytA4MkoqBjGcNkUATKoM9Bfbe8bu9Y7oZUhi6ViqouYraec0yMoQ3v0PTdmjTQNvZAi5ay1Lhs5FLsNp/SXuSUonHPeMP4lxAdaSiY5XKHrVlPHcwik4zZOAEGsq4btgX2HFafvhFajeVjIJhlagytdwYUdtnavb6euNpd1thZ7s7jmcWCfpmVvsW2GWeu50BeWUikE6VGEdiuRzZqBKZWULawxxhFH1OPzWhETRNVhE0l1/M+19IIWQfmGC13GBYDs637ubQYXGuvs7Nu7lrH+WB7duOMoxOVR06wpJDEGMeYZFw7Bb9w4T2GCzz88uGZr31z8d76/Jde/eD22cvZzWelQGRT9FQVThRlhqXQMGoDlNHyQGOZSgu96yp2sbKKrAzDKF1cLXVhOWtUmpIjSYOHkGoF9WEti2dnCx6WyroIzm1xZbjil/XzQfe/sjx7ZflPdlRevSm2kI6IyxqOQSR2zdohIJKFVvr2NfPmpv69841vXAG/cfRlujN4y/ueefeO7n81TktSZqJ9lpM7jyMnWBhmY+e3Kj0rHaAjAnDejs9fRHAReOyoi3dofM8zH51/8tvMvdxPnCCoPjqF/1gIJkNRG6Dn1Td0YF7QrcWY32184AMfqPBoTuPWpsH7WvvSnYKOXunIyLU9TBSG7MXujXjsZODpp5923co1sYRQdE3zVO7ZK6GNp2vcHu8duS3RLch7tNEJ03EDc/3JgnGsiaJ9nGXq2qi8Zzq/fUF5/B5nyavuCEflexx3IUTgHqKVDuXBvC0cfxDOPUWx48dpEM4JwynBThjuGMHsjSCKqyOapsCL5gYxHORzPllw2tP8y3hcwXkrPzzg/EYg0/TZ4j1Ya5h3hcOi60/HsUPiVCQeEt/4xjdeSODIHcPxEexe5KnrxOIcdSj6sRDMbp7glwqOzHt/LKYp33SV7AnG8dfrQIKNS7vWGl/cRtk0xbzgw0U3v0jhKbi1/XdVuG3ZaEBtXD8kWkTQuDWJryVIHuYVElLsW3UYEa1fhElVgsLy0nxTUz2xmHYx2hOB2TZoWRMyrrLUc+OlnaM6Pz1P60jmvWvX5bBNJ35udqBDQXvB7rf3oBcVXvOaL45a4tUrWrjKOn9ne+WpWn/CcEqw24FfAtb6U9weTgl2wnD0BLvKGuqX0gz6CHDHCHbQktlNy/MU0pzd4oQr9LeJw1jrdRet9ac4PE4JdsIQd8NFcIrD45TDThhuSrCXtnbwYkHbEMwatyj1VQ4QbVjIYjLbn1LuRYFwMi4zvWoVxmSvzRg3s+KG/OYNS/M+B949vBuYDzv+H8Jab0Nm3rrScQf9IadKzm3gVOk4YTgl2AnDKcFOGE4JdsKw3n5vHTtwh7A2AHu/F/2WQplPCKbkOutt/3T0a3M2tik7rn2T7iWScexKb5AnYg34KUbcjdwrxDC/x7js+HCqdJwwnBLshOFuEOxUHN4G7izB1jEIvsYIvH8Xi3sD2sj1yeZU5mY4REyH1MLej4DDrl+a9dbk95Dxvm3sfbwVOh3DThhOCXZIfOMb3z2y1nFPnE9xeBxTKq9NnBLshCE4/hRip7gNBJO6nXcg6H1jBebVIdv3IkIxLo7cH4txUxwypoNTkXjycEqwE4ZjJ9gNs+2e4qY4hm3Qr8W9s9zouNT6vcwQpyLxhOHIOUxAcazTI+Y93Ue08Zl3KvB2H45sBeakkkZCN7SkaxWREXubap9orf+RMYPfHuyr9+VoG63sxw0CdV4MKzC9zhplKkGNe03puHob9An1qkypd2aTlWPJbrQKk9EStebJSPxwS7gbwn2MmjrKTj/lUBbFIjA5rE48lz3CZ+/K4tVjUTpinXNS9Kc5Bm4Lx5AsR4TcEn9K9ENl66CciicOxy8ojkkMty34whCZ9EOceJEIj9yVt0aFda7gvSCZF96eB63AdBfUUlgaBleiv3OFv6t45FqF/ZZxG/slHqlIlMSyDlBEv9WzHBJ3fXm+e3l55F+557Nw7rzNW46yFIfHq57EF9+uA+lyN7TEIyWYbUoRtRc7daHoxCKibj/w8POffadW6xsvHGUpjg53eMHPLeFYtEQPAxGBSmFnqPfN5/f97Nt+5ulvhYZuiGRRglJ6nam96KyFbFEtlLKkYkNAGedwERBJKOwItXzL2EqtWOGStlAoIGJM1jzeA3bnypAjiwTRb1OjMzkw79y5Dp5L2/nck5+e/dqHfvnixQvLlmn76v0R70G13tV0EZRZz+5qyW6tW9+8VP/W/XGGwQtql+z2QURhu3ZkEatuTOMbk0wPFEYhUh7zN3sMrixtDI5xv8l+i6y5DvJkI99zjBYXaktbm+PevF3Mef7KLme2t+iz4hVsP3CW4dnnvvNP/OD3/Qcusjzqdrox5DHkx0dOsE4FV1MXlb4EpXQ4K6IHZqDVlMnc8pgNveUlRFOLR8u4nZr2DxYOQVRq5Dg4j1VLUVQ2diEZTUJhrCndYcvUXVSQIJ2cOdfTa6DIDC5D7SndfeeGL37p0oGmmbwLen3XJrY9RQVT0dhYVjAFtrZ7fLgdU0PIbiq9CsNqRSkzdpZmNheDCsUQslyEiuhiL6BWapzV3jyKthjTaiqalNJ43xhT0src5n2ilTtaAHkr0lQvtfK1a0nWFWnoup7VgOpqGX/k4fmBRLkmyu3IYtH3Hty5JuGCVkH0BccABJUyGpSSYt+0LPus9WNsPcCQiUprmJqtM2QOaCaWtPjtYpo1fxzFI5t486iG2RBjSvr1PvqaWtwb+1cLY4IgY8xdP9bXainr1wlGx6W8tggKVIjSj2U2fRkz4z5zcJ3LxhRmM1v6USETYmtrW0O9QmWAaFzmWI07fE8O/WkP9sNKgGt3wPcoUK6t3sYCCm+cubozb2S+uvoZvmbL9XFBwb7dyTd/5Y0Ps86CY+Ch69fo619/SL4LWmLsLFdDzAY0kwdrpMsAJMLEOD30OtPBSwPrTnIDDjt2CAehT3ezYDksWXmAYiAJTLiu/Trjmbtd5CPBesODE+BRje2t8hWGZa4GK7ogR7tfG1WMqOvB+qWEJj0Li3l/3co//PAzd4W6EWfPfS2X+VyJToRsB3iGXMBlHCjynlrXdZIRz3/hk091qr+91c+8WtW0e3APFrJQliYqosLBZrUTj5bDc+P/W/iN8uo93u98ua5G/Nav/9jzqquPnJujzn3FBasbLcQB2YEq1vJFFTUzpY2fkqXeiVj+tadh3NEmbqIF5mbADEe9lsB4mulIX/ukdr751KzSqdp2kprCF0vjNIYXFcGOFOt5p8WDN7jvbuXA/Otv/PDnvfv1j5/piE4MZsBKpinhS4RM+xMkjBaRB29IseOEmjr46KOPdz/5k/9s8ZpXln/r3f+zk8OVLiCtgRpDs79ZyLczcT452Fy1j4LlzuUb7Jt7vH3ZQvHEJ95SOX8+Hs4/9vEHHlr+xzPboSHJ1ArHClQRBTw/zrIdK6QD1na9CKedgeTHPv8G/fzPe9i58pX3rha//7XSqVjV1gCsRuVjUvP3DHrXdq/rd7j9Z/fCmX2dG9YWozvCzLfykP33WIwWyfVQdqi36SaBoy+0es1O2Xx/XLz49vrYYxfjUx/6kS9s98+8e0v/T0psersUrNom0SqYQjqQCl1Es4J4aLZBcm20zfFwtLSMUwSwFKMRd/QIqFlQUs26bk2T96uthJtZOT06N3L9abX5YgsIryDI0SUzWe1F0jEQGkYrfnu33HyjkkjvuWJqSDzwwPVb8JGp2WM0TY6GhhSRIrIQDuQeOcaDjXntvo3nR8Vuj8x7BA1wyC5IsbcyoRHN5b//4hv/3Zn4vfc8cMaRyyqyIzOBgawVKei60rIU1QFTKR0bockb8dmT2uJrjdhyC4EbqbimgycL7XoTFu0jUzs37rTvZqAeR509F4yyuYmantfu3tjZRWvvQnNkY1E0hrwqKdTWXXSwu3D3k68f45mnBjbkXgiTpnnsZMmHdVmqTI3pf226E/Yah73rVutuQez3OF+8qArW216jf/yffu83edX8kfc8uxPEfJ7arhG1YgZy8gaLZrpKEeMcxhbyOBVI4TAZqzZOjBXIadwgiXHCqtHKHtkIWGPP4KyJsFOjTM7Ide+YeFDUiNHqmRTXkajCFAZ1WI2DYipDVjKCZYgaRhoIVyKBauAADpveqdXok3Nzqo7etck70Dw8U6ebrpS9eOjRHW6Bw8jZ4hhinF+GSVdSScbO9db+iAsXyE/9mz91ob/8v999Jp7bnZUaVy49N8Aq8YBzaI2sAhQGQ9KRLqPyOcFXTQo8xtZfffia/5vPioPzPmv9yJGgzQY6+Rj2iObWKWiGgCqRBKlArhRWa+P2NPJMtSjY8O0DiWV57Esm1dYNpJI69q86HtOcth3a64T7qjO2lTfaQgluFqZgYBosrinHJJj+6y+94Wce2Pr83+mW//NLD53d6rzKUNWqi1mSHcOykN6i686S9OMRpBJrhWPJEANDmBrJEImV5PhZ5fW1Gu18+6zgbBxIbT3eSXFSSIqh1DbuFEPJ8ZrNHtka9wZJuB1SNs83SeccG6BuELRD2SMXwlC8uk7zjPhDrfFzHNetQqrDKlhBbW+hRk9VT1VHVY8prTN4KntLz7Eu51QmNsvcnMxk+ADFdezXj/1q+Y1/+QMfvk9f+ksP9b//C+eKn53Pz/Y5zMLuV3SlSspaEwdYiTVgDaABMbSXOsClGZSzQHbY3XownjRQuVvftyfuJkFS1wlHvDmqtcVTUzqZtRhMFyqFStcaEqFMCgMlm+hp8f5lJO4wmuDEQGnS0INny+G6PP6aT12yMl2yecino6RbR8J0NqW28Ap5PJ9CGeMx1tXtfyaDuwu4GztQhzwzOUN55iZBOBffXh999PHuiV946+8CP/aWn3jyV67UK3+t6Mqf1/wVr9+tlVor6WpFZ8KSWq+QklCCgkDIHVKuY0S0duBk05+b8kSoRUHVboWjNh/cGMPhmHQUrWM5vBGx3ERojnvViepujJyd1JIksi0UnhQPUwhXipakA5ee6s4hLCmf5cvXbZpXvuVzGf/tzy76THeBM5Mcx/K258nYmewxScu0+/ZU+9iLK3EwxRe1EKEeOxEdJrBwn7jL7uZRU0888dbh/HnH5z+PLn5Q/8XnefxHLn36e67sfvV779+6/9Glth9l65XffTl7LQ2rCoNWWEMLNYvEuULU1lChdeFaqF8LM3SKGJUBY2oOJMnoK2BSaNeT3I3YjlA0TSoriqZW12FF33UMw4qun7XQty5oMSyiFJPDQN8FqwTnnJj1XL6y5Ez0fQ0YlnXr3AOvuzo3PQCf+AQxdH7ZQK/F7kJ9P6NmUmttHTGbcctpWp9sm81EVgoLnLTp0agX2Y3QoulVpfQsdhcoZpBDYXdBd+7S9guZv+nR84+XJy68dZhOfOYzn+l/+t/f/+BC971pgb9/md13rJSvXmkoVk3ClEiV6KzwpEusd0vKwKFpP5nW6UKQRmpDiWVEMaGwsLTmsjGYShvxJjIusqMIFZJAs2BYrJhvdeAlEWTYEHYq3JbHpciCZ4qIWWyXuYt8Nnae/GT/W4//7C/93DsuXyeQVG973xfef3ln9oeHoS5m/UxDTQ9DKkpBQzOdNKVWLZQ1U2IJDGiKx3Bgp2luLLvCqiZ96SOJMp+dmxW67oyWW/PV1z70/wHMj3TvXlDOlAAAAABJRU5ErkJggg==") center/contain no-repeat;flex:0 0 auto}
+.brand b{font-family:var(--fdisp);font-weight:800;font-size:20px;letter-spacing:.14em}
+.brand b i{font-style:normal;color:var(--blue)}
+.nav-c{display:flex;align-items:center;gap:2px}
+.nav-c a{font-size:14.5px;font-weight:500;color:var(--body);padding:9px 15px;border-radius:9px;transition:.2s;position:relative}
+.nav-c a:hover{color:var(--ink);background:var(--soft)}
+.nav-r{display:flex;align-items:center;gap:12px}
+.lang{display:flex;border:1px solid var(--line-2);border-radius:9px;overflow:hidden;font-family:var(--fmono);font-size:12.5px}
+.lang button{background:#fff;border:none;color:var(--mut);cursor:pointer;padding:8px 12px;font:inherit;transition:.2s}
+.lang button.on{background:var(--blue);color:#fff}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-size:14px;font-weight:600;
+  padding:10px 18px;border-radius:10px;transition:.25s var(--ease)}
+.nav-cta:hover{background:var(--blue);transform:translateY(-1px)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.burger span{width:23px;height:2px;background:var(--ink);border-radius:2px;transition:.3s var(--ease)}
+.burger.x span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.x span:nth-child(2){opacity:0}.burger.x span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:940px){
+  .nav-c{position:fixed;inset:0 0 0 auto;width:min(78vw,320px);flex-direction:column;justify-content:center;align-items:stretch;
+    gap:4px;padding:40px 30px;background:#fff;box-shadow:var(--sh-lg);transform:translateX(100%);transition:transform .4s var(--ease)}
+  [dir="rtl"] .nav-c{inset:0 auto 0 0;transform:translateX(-100%)}
+  .nav-c.open{transform:translateX(0)}
+  .nav-c a{font-size:16px;padding:14px 12px;border-bottom:1px solid var(--line)}
+  .burger{display:flex}.nav-cta{display:none}
+}
+
+/* ================= HERO ================= */
+.hero{padding:clamp(120px,15vh,168px) 0 clamp(60px,8vw,100px);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-3;background:
+  radial-gradient(900px 500px at 80% -5%,rgba(49,177,251,.10),transparent 60%),
+  radial-gradient(700px 500px at 0% 100%,rgba(35,101,250,.07),transparent 55%),
+  linear-gradient(180deg,var(--soft),#fff 55%)}
+.hero-bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+@media(prefers-reduced-motion:reduce){.hero-bg{display:none}}
+.hero-overlay{position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,.35) 60%,rgba(255,255,255,.6)),
+  radial-gradient(900px 500px at 80% -5%,rgba(49,177,251,.06),transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1fr;max-width:760px}
+.hero .badge{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line-2);border-radius:999px;
+  padding:7px 15px 7px 8px;font-size:13px;color:var(--body);box-shadow:var(--sh-sm);margin-bottom:26px}
+.hero .badge b{background:var(--tint);color:var(--blue);font-family:var(--fmono);font-size:11px;font-weight:600;
+  padding:3px 9px;border-radius:999px;letter-spacing:.04em}
+.hero h1{font-family:var(--fdisp);font-weight:800;color:var(--ink);letter-spacing:-.025em;line-height:1.04;
+  font-size:clamp(36px,6vw,66px);text-wrap:balance}
+[dir="rtl"] .hero h1{font-family:var(--far);letter-spacing:0;line-height:1.18;font-size:clamp(34px,5.6vw,60px)}
+.hero h1 .em{color:var(--blue)}
+.hero-lead{color:var(--body);font-size:clamp(16px,1.5vw,18.5px);max-width:46ch;margin:22px 0 32px;line-height:1.7}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-trust{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+.hero-trust span{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--mut);font-weight:500}
+.hero-trust svg{width:16px;height:16px;stroke:var(--ok);stroke-width:2.4}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+
+/* ================= LOGO/STRIP ================= */
+.strip{border-block:1px solid var(--line);background:var(--soft);overflow:hidden}
+.strip .wrap{display:flex;align-items:center;gap:24px;padding-block:20px}
+.strip .lbl{flex:0 0 auto;font-family:var(--fmono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.marquee{flex:1;min-width:0;overflow:hidden;
+  -webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+  mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee-track{display:flex;width:max-content;animation:mscroll 32s linear infinite}
+[dir="rtl"] .marquee-track{animation:mscrollRtl 32s linear infinite}
+@media(hover:hover){.marquee:hover .marquee-track{animation-play-state:paused}}
+.marquee-track span{padding:0 26px;display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:var(--ink);white-space:nowrap}
+.marquee-track svg{width:17px;height:17px;stroke:var(--blue);stroke-width:2;flex:0 0 auto}
+@keyframes mscroll{to{transform:translateX(-50%)}}
+@keyframes mscrollRtl{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+@media(max-width:600px){.strip .lbl{display:none}}
+
+/* ================= ABOUT ================= */
+.about{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,70px);align-items:center}
+.about .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.mini-card{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff;box-shadow:var(--sh-sm);transition:.3s var(--ease)}
+.mini-card:hover{box-shadow:var(--sh);transform:translateY(-3px);border-color:var(--line-2)}
+.mini-card .tile{width:44px;height:44px;border-radius:11px;margin-bottom:14px}
+.mini-card .tile svg{width:22px;height:22px}
+.mini-card h4{font-family:var(--fdisp);font-weight:700;color:var(--ink);font-size:16px;margin-bottom:4px}
+[dir="rtl"] .mini-card h4{font-family:var(--far)}
+.mini-card p{font-size:13.5px;color:var(--mut)}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+
+/* ================= SERVICE CARDS ================= */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{position:relative;border:1px solid var(--line);border-radius:18px;padding:28px;background:#fff;box-shadow:var(--sh-sm);
+  transition:.3s var(--ease);overflow:hidden;cursor:default;display:flex;flex-direction:column}
+.card:hover{box-shadow:var(--sh);transform:translateY(-5px);border-color:var(--line-2)}
+.card:hover .tile{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;box-shadow:0 8px 20px -8px rgba(35,101,250,.6)}
+.card .no{font-family:var(--fmono);font-size:12px;color:var(--mut);position:absolute;top:24px;inset-inline-end:26px}
+.card h3{font-family:var(--fdisp);font-weight:700;color:var(--ink);font-size:20px;margin:18px 0 10px;letter-spacing:-.01em}
+[dir="rtl"] .card h3{font-family:var(--far)}
+.card>p{color:var(--body);font-size:14.5px;margin-bottom:16px}
+.card ul{list-style:none;margin-top:auto;display:flex;flex-direction:column;gap:8px}
+.card li{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--body)}
+.card li svg{width:15px;height:15px;stroke:var(--blue);stroke-width:2.4;flex:0 0 auto}
+.cards.two{grid-template-columns:repeat(2,1fr);max-width:820px;margin-inline:auto;margin-top:20px}
+@media(max-width:900px){.cards,.cards.two{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.cards,.cards.two{grid-template-columns:1fr}}
+
+/* ================= FEATURE (security / ai) ================= */
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,64px);align-items:center}
+.feat .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--ink);background:#fff;
+  border:1px solid var(--line-2);border-radius:999px;padding:9px 15px;box-shadow:var(--sh-sm);transition:.25s}
+.chip svg{width:15px;height:15px;stroke:var(--blue);stroke-width:2.2}
+.chip:hover{border-color:var(--blue);transform:translateY(-2px)}
+.feat-list{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh-lg);overflow:hidden}
+.fl-row{display:flex;align-items:center;gap:16px;padding:20px 24px;border-bottom:1px solid var(--line);transition:background .25s}
+.fl-row:last-child{border-bottom:none}
+.fl-row:hover{background:var(--soft)}
+.fl-row .tile{width:46px;height:46px;border-radius:12px}
+.fl-row .tile svg{width:23px;height:23px}
+.fl-row .t{font-family:var(--fdisp);font-weight:700;color:var(--ink);font-size:16px}
+[dir="rtl"] .fl-row .t{font-family:var(--far)}
+.fl-row .d{font-size:13.5px;color:var(--mut);margin-top:2px}
+@media(max-width:860px){.feat{grid-template-columns:1fr}.feat-list{order:-1}}
+
+/* ================= WORK ================= */
+.work{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.wcard{border:1px solid var(--line);border-radius:18px;padding:28px;background:#fff;box-shadow:var(--sh-sm);
+  transition:.3s var(--ease);display:flex;gap:20px;align-items:flex-start;cursor:default}
+.wcard:hover{box-shadow:var(--sh);transform:translateY(-4px);border-color:var(--line-2)}
+.wcard .no{flex:0 0 auto;width:54px;height:54px;border-radius:13px;display:grid;place-items:center;
+  background:var(--tint);color:var(--blue);transition:.3s var(--ease)}
+.wcard .no svg{width:26px;height:26px;stroke-width:2}
+.wcard:hover .no{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff}
+.wcard h3{font-family:var(--fdisp);font-weight:700;color:var(--ink);font-size:19px;letter-spacing:-.01em;line-height:1.2}
+[dir="rtl"] .wcard h3{font-family:var(--far)}
+.wcard p{color:var(--body);font-size:14px;margin:8px 0 12px}
+.wcard .tag{display:inline-flex;font-family:var(--fmono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--blue);background:var(--tint);padding:5px 11px;border-radius:999px}
+@media(max-width:820px){.work{grid-template-columns:1fr}}
+
+/* ================= NEWS ================= */
+#news[hidden]{display:none}
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ncard{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  background:#fff;box-shadow:var(--sh-sm);transition:.3s var(--ease);height:100%;text-decoration:none}
+.ncard .ndate{display:inline-flex;align-items:center;gap:5px}
+.ncard .ndate svg{width:13px;height:13px;stroke-width:2.2}
+.ncard:hover{box-shadow:var(--sh);transform:translateY(-5px);border-color:var(--line-2)}
+.ncard .cov{width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--soft);display:block}
+.ncard .nbody{padding:22px 24px 26px;display:flex;flex-direction:column;gap:9px;flex:1}
+.ncard .ndate{font-family:var(--fmono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.ncard h3{font-family:var(--fdisp);font-weight:700;color:var(--ink);font-size:18.5px;letter-spacing:-.01em;line-height:1.3}
+.ncard p{color:var(--body);font-size:14px;flex:1}
+.ncard .nmore{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:13.5px;color:var(--blue);margin-top:2px}
+.ncard .nmore svg{width:15px;height:15px;transition:transform .3s var(--ease)}
+.ncard:hover .nmore svg{transform:translateX(4px)}[dir="rtl"] .ncard:hover .nmore svg{transform:scaleX(-1) translateX(4px)}
+@media(max-width:900px){.news{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.news{grid-template-columns:1fr}}
+
+/* ================= WHY ================= */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.wc{border:1px solid var(--line);border-radius:18px;padding:26px;background:#fff;box-shadow:var(--sh-sm);transition:.3s var(--ease)}
+.wc:hover{box-shadow:var(--sh);transform:translateY(-4px);border-color:var(--line-2)}
+.wc:hover .tile{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff}
+.wc h4{font-family:var(--fdisp);font-weight:700;color:var(--ink);font-size:18px;margin:16px 0 8px}
+[dir="rtl"] .wc h4{font-family:var(--far)}
+.wc p{color:var(--body);font-size:14px}
+@media(max-width:860px){.why{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.why{grid-template-columns:1fr}}
+
+/* ---- stats band ---- */
+.statband{position:relative;overflow:hidden;border-radius:24px;padding:clamp(36px,4.5vw,58px) clamp(20px,2.5vw,36px);
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:clamp(30px,4vw,44px);
+  background:linear-gradient(135deg,#071a4d,#020e30 68%);border:1px solid rgba(120,150,220,.16);box-shadow:var(--sh-lg)}
+.statband::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(620px 220px at 84% -30%,rgba(49,177,251,.20),transparent 62%)}
+[dir="rtl"] .statband::before{background:radial-gradient(620px 220px at 16% -30%,rgba(49,177,251,.20),transparent 62%)}
+.statband .st{position:relative;text-align:center;padding-inline:14px;border-inline-end:1px solid rgba(255,255,255,.09)}
+.statband .st:last-child{border-inline-end:none}
+.statband .st .v{font-family:var(--fdisp);font-weight:800;font-size:clamp(34px,4.8vw,54px);letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;line-height:1;
+  background:linear-gradient(120deg,#eaf3ff,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.statband .st .l{color:#9fb0d6;font-size:13.5px;margin-top:13px;line-height:1.4}
+@media(max-width:640px){.statband{grid-template-columns:1fr 1fr;gap:30px 0}
+  .statband .st:nth-child(2){border-inline-end:none}
+  .statband .st:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.09);padding-bottom:30px}}
+
+/* ================= SECTORS ================= */
+.sect{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sc{border:1px solid var(--line);border-radius:16px;padding:26px 22px;background:#fff;box-shadow:var(--sh-sm);
+  transition:.3s var(--ease);text-align:center;cursor:default}
+.sc:hover{box-shadow:var(--sh);transform:translateY(-5px);border-color:var(--blue)}
+.sc:hover .tile{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff}
+.sc .tile{margin:0 auto 16px}
+.sc span{display:block;color:var(--ink);font-weight:600;font-size:15px}
+@media(max-width:860px){.sect{grid-template-columns:1fr 1fr}}
+
+/* ================= PROCESS ================= */
+.proc{position:relative;display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.proc::before{content:"";position:absolute;top:34px;inset-inline:calc(100%/14);height:2px;z-index:0;
+  background:linear-gradient(90deg,var(--line-2),rgba(35,101,250,.55),var(--line-2))}
+.step{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
+.step .node{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:#fff;
+  border:1px solid var(--line-2);box-shadow:var(--sh-sm);color:var(--blue);transition:.3s var(--ease)}
+.step .node svg{width:26px;height:26px;stroke-width:2}
+.step:hover .node{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;border-color:transparent;
+  transform:translateY(-5px);box-shadow:0 14px 28px -10px rgba(35,101,250,.6)}
+.step .sn{font-family:var(--fmono);font-size:11px;letter-spacing:.12em;color:var(--blue)}
+.step h4{font-family:var(--fdisp);font-weight:700;color:var(--ink);font-size:16px;letter-spacing:-.01em;margin:5px 0 4px}
+[dir="rtl"] .step h4{font-family:var(--far)}
+.step p{color:var(--mut);font-size:12.5px;line-height:1.5;max-width:22ch;margin-inline:auto}
+@media(max-width:980px){
+  .proc{grid-template-columns:1fr;gap:0}
+  .proc::before{top:24px;bottom:24px;height:auto;width:2px;inset-inline:auto;inset-inline-start:34px;
+    background:linear-gradient(180deg,var(--line-2),rgba(35,101,250,.55),var(--line-2))}
+  .step{flex-direction:row;align-items:flex-start;text-align:start;gap:20px;padding:16px 0}
+  .step .node{width:56px;height:56px;flex:0 0 auto}
+  .step .txt{padding-top:5px}
+  .step p{margin-inline:0;max-width:52ch}
+}
+
+/* ================= CONTACT (dark) ================= */
+.contact{background:var(--navy);color:#fff}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,68px);align-items:start}
+.contact .eyebrow{color:var(--cyan)}.contact .eyebrow::before{background:var(--cyan)}
+.contact h2{font-family:var(--fdisp);font-weight:800;color:#fff;font-size:clamp(28px,3.6vw,44px);letter-spacing:-.02em;line-height:1.08}
+[dir="rtl"] .contact h2{font-family:var(--far);letter-spacing:0;line-height:1.25}
+.contact .lead{color:#aebbdd;margin-top:16px;max-width:42ch}
+.ct-info{margin-top:32px;display:flex;flex-direction:column;gap:4px}
+.ci{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.1);color:#dbe4f7;font-size:15px}
+.ci .tile{width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.08);color:var(--cyan)}
+.ci .tile svg{width:20px;height:20px}
+.form{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:clamp(24px,3vw,36px);
+  display:flex;flex-direction:column;gap:15px}
+.fld label{font-size:12.5px;font-weight:600;color:#aebbdd;display:block;margin-bottom:7px}
+.fld input,.fld select,.fld textarea{width:100%;background:rgba(2,10,32,.5);border:1px solid rgba(255,255,255,.15);
+  border-radius:11px;padding:13px 14px;color:#fff;font-family:inherit;font-size:15px;transition:.2s}
+.fld textarea{resize:vertical;min-height:100px}
+.fld input::placeholder,.fld textarea::placeholder{color:#5e6f96}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(49,177,251,.18)}
+.fld select option{color:#000}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.fmsg{font-size:14px;padding:12px 14px;border-radius:11px;display:none}
+.fmsg.ok{display:block;background:var(--ok-bg);border:1px solid rgba(49,177,251,.3);color:#dbe4f7}
+.fmsg.err{display:block;background:rgba(255,90,90,.12);border:1px solid rgba(255,90,90,.4);color:#ffd4d4}
+.fnote{font-size:12px;color:#5e6f96}
+@media(max-width:820px){.ct-grid{grid-template-columns:1fr}.two{grid-template-columns:1fr}}
+
+/* ================= FOOTER ================= */
+footer{background:var(--navy-1);color:#fff;padding:clamp(48px,6vw,68px) var(--gut) 30px}
+.foot{max-width:var(--maxw);margin-inline:auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:36px}
+.foot .brand{color:#fff}.foot .brand b i{color:var(--cyan)}
+.foot p{color:#8fa0c6;font-size:14px;margin-top:16px;max-width:34ch;line-height:1.7}
+.foot h5{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#7688b0;margin-bottom:16px}
+.foot a,.foot .li{display:block;color:#c3cfe8;font-size:14.5px;margin-bottom:11px;transition:color .2s}
+.foot a:hover{color:var(--cyan)}
+.foot-b{max-width:var(--maxw);margin:44px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#7688b0}
+@media(max-width:820px){.foot{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.foot{grid-template-columns:1fr}}
+</style>
+
+<!-- brand gradient def (shared) -->
+<script>window.__SITE__={"fields":{"nav.1":{"ar":"الرئيسية","en":"Home","section":"nav"},"nav.2":{"ar":"من نحن","en":"About","section":"nav"},"nav.3":{"ar":"خدماتنا","en":"Services","section":"nav"},"nav.4":{"ar":"مشاريعنا","en":"Work","section":"nav"},"nav.5":{"ar":"القطاعات","en":"Sectors","section":"nav"},"nav.6":{"ar":"تواصل","en":"Contact","section":"nav"},"nav.7":{"ar":"ابدأ الآن","en":"Get Started","section":"nav"},"hero.1":{"ar":"نصنع التقنية","en":"We engineer technology","section":"hero"},"hero.2":{"ar":"نحمي المستقبل","en":"We secure the future","section":"hero"},"hero.3":{"ar":"حلول تقنية متكاملة، أمن سيبراني متقدم، وذكاء اصطناعي يساعد المؤسسات على بناء مستقبل رقمي أكثر أماناً وكفاءة","en":"Integrated technology, advanced cybersecurity and artificial intelligence — helping organizations build a safer, more efficient digital future","section":"hero"},"hero.4":{"ar":"اكتشف خدماتنا","en":"Explore Services","section":"hero"},"hero.5":{"ar":"استكشف مشاريعنا","en":"View Work","section":"hero"},"hero.6":{"ar":"مشاريع حكومية وخاصة","en":"Public & private projects","section":"hero"},"hero.7":{"ar":"دعم فني ومراقبة على مدار الساعة","en":"24/7 support & monitoring","section":"hero"},"about.1":{"ar":"من نحن","en":"About Us","section":"about"},"about.2":{"ar":"نبني الأنظمة التي تُنظّم العمل وتحمي البيانات","en":"We build the systems that organize work and protect data","section":"about"},"about.3":{"ar":"الفخامة (LUXURY) شركة عراقية مقرها بغداد، متخصصة في تكنولوجيا المعلومات، الأمن السيبراني، تطوير البرمجيات، البنية التحتية التقنية والذكاء الاصطناعي. نعمل مع المؤسسات الحكومية والخاصة لبناء أنظمة موثوقة وآمنة قابلة للتوسّع","en":"LUXURY is a Baghdad-based Iraqi technology company specialized in IT, cybersecurity, software development, infrastructure and AI. We work with public and private institutions to build reliable, secure and scalable systems","section":"about"},"services.1":{"ar":"خدماتنا","en":"Services","section":"services"},"services.2":{"ar":"حلول تقنية مصمّمة للأعمال","en":"Technology solutions built for business","section":"services"},"services.3":{"ar":"خمسة مجالات أساسية تغطّي دورة حياة أنظمتك — من التطوير إلى الحماية والدعم","en":"Five core domains covering the full lifecycle of your systems — from development to protection and support","section":"services"},"security.1":{"ar":"الأمن السيبراني","en":"Cybersecurity","section":"security"},"security.2":{"ar":"الأمن ليس خياراً. بل جزءٌ من البنية الأساسية","en":"Security is not an option. It is infrastructure","section":"security"},"security.3":{"ar":"نبني الحماية داخل الأنظمة منذ لحظة تصميمها — من الشبكات والخوادم إلى قواعد البيانات وصلاحيات الوصول","en":"We build protection into systems from the moment they're designed — from networks and servers to databases and access control","section":"security"},"ai.1":{"ar":"ذكاء اصطناعي مصمَّم لأعمالك","en":"Artificial intelligence, built for your business","section":"ai"},"ai.2":{"ar":"نطوّر حلول ذكاء اصطناعي مخصصة لتحليل البيانات، أتمتة العمليات، وبناء أنظمة ذكية تدعم اتخاذ القرار داخل المؤسسة","en":"We develop customized AI solutions for data analysis, process automation and intelligent systems that support decision-making","section":"ai"},"ai.3":{"ar":"اكتشف حلول الذكاء الاصطناعي","en":"Discover AI Solutions","section":"ai"},"work.1":{"ar":"مشاريعنا","en":"Selected Work","section":"work"},"work.2":{"ar":"مشاريع صنعت فرقاً","en":"Projects that made a difference","section":"work"},"why.1":{"ar":"لماذا الفخامة","en":"Why Luxury","section":"why"},"why.2":{"ar":"شريك تقني يمكنك الوثوق به","en":"A technology partner you can trust","section":"why"},"sectors.1":{"ar":"القطاعات","en":"Sectors","section":"sectors"},"sectors.2":{"ar":"نخدم القطاعات التي تعتمد على التقنية","en":"We serve the sectors that run on technology","section":"sectors"},"process.1":{"ar":"كيف نعمل","en":"How We Work","section":"process"},"process.2":{"ar":"من الفكرة إلى نظام آمن يعمل","en":"From idea to a secure system in production","section":"process"},"contact.1":{"ar":"تواصل معنا","en":"Contact","section":"contact"},"contact.2":{"ar":"لنبنِ الحل المناسب لأعمالك","en":"Let's build the right solution for your business","section":"contact"},"contact.3":{"ar":"هل لديك مشروع تقني، نظام يحتاج إلى تطوير، أو بيئة تحتاج إلى حماية؟ دعنا نتحدث","en":"Have a technology project, a system to build, or an environment to protect? Let's talk","section":"contact"},"contact.4":{"ar":"العراق — بغداد — شارع الأميرات","en":"Iraq — Baghdad — Al-Amirat Street","section":"contact"},"contact.5":{"ar":"التواصل عبر النموذج","en":"Reach us via the form","section":"contact"},"contact.6":{"ar":"الاسم","en":"Name","section":"contact"},"contact.7":{"ar":"الشركة","en":"Company","section":"contact"},"contact.8":{"ar":"الهاتف","en":"Phone","section":"contact"},"contact.9":{"ar":"الخدمة","en":"Service","section":"contact"},"contact.10":{"ar":"رسالتك","en":"Message","section":"contact"},"contact.11":{"ar":"إرسال الطلب","en":"Send Request","section":"contact"},"footer.1":{"ar":"شركة الفخامة لتكنولوجيا المعلومات والأمن السيبراني والحلول الذكية والذكاء الاصطناعي — بغداد، العراق","en":"LUXURY — Information Technology, Cybersecurity, Smart Solutions & AI. Baghdad, Iraq","section":"footer"},"footer.2":{"ar":"روابط","en":"Navigate","section":"footer"},"footer.3":{"ar":"من نحن","en":"About","section":"footer"},"footer.4":{"ar":"خدماتنا","en":"Services","section":"footer"},"footer.5":{"ar":"مشاريعنا","en":"Work","section":"footer"},"footer.6":{"ar":"القطاعات","en":"Sectors","section":"footer"},"footer.7":{"ar":"خدماتنا","en":"Services","section":"footer"},"footer.8":{"ar":"تطوير الأنظمة","en":"Systems","section":"footer"},"footer.9":{"ar":"الأمن السيبراني","en":"Cybersecurity","section":"footer"},"footer.10":{"ar":"الذكاء الاصطناعي","en":"AI Solutions","section":"footer"},"footer.11":{"ar":"البنية التحتية","en":"Infrastructure","section":"footer"},"footer.12":{"ar":"تواصل","en":"Contact","section":"footer"},"footer.13":{"ar":"بغداد — شارع الأميرات","en":"Baghdad — Al-Amirat St","section":"footer"},"footer.14":{"ar":"جميع الحقوق محفوظة","en":"All rights reserved","section":"footer"},"news.1":{"ar":"آخر الأخبار","en":"Latest News","section":"news"},"news.2":{"ar":"جديدنا وتحديثاتنا","en":"Our latest news and updates","section":"news"},"news.3":{"ar":"جميع الأخبار","en":"All News","section":"news"}},"arrays":{"services":[{"ic":"code","n":"01","ar":"تطوير الأنظمة والبرمجيات","en":"Systems & Software","dAr":"أنظمة إدارية ومالية وحلول برمجية مخصصة تُنظّم عمل المؤسسة بالكامل","dEn":"Administrative, financial and fully-custom software that organizes how your institution operates","ia":["أنظمة إدارية ومالية","CRM والأرشفة الإلكترونية","قواعد البيانات والصلاحيات","أتمتة العمليات والتكامل"],"ie":["Admin & financial systems","CRM & e-archiving","Databases & permissions","Automation & integration"]},{"ic":"shield","n":"02","ar":"الأمن السيبراني والحماية الرقمية","en":"Cybersecurity","dAr":"حماية الشبكات والخوادم والمواقع وقواعد البيانات، ومراقبة الأنظمة واكتشاف المخاطر","dEn":"Protecting networks, servers, sites and databases — monitoring systems and detecting risks early","ia":["حماية الشبكات والخوادم","اختبار الثغرات والمراقبة","النسخ الاحتياطي والاستعادة","إدارة صلاحيات الوصول"],"ie":["Network & server security","Pen-testing & monitoring","Backup & recovery","Access control"]},{"ic":"monitor","n":"03","ar":"المواقع والخدمات الرقمية","en":"Websites & Digital","dAr":"مواقع وبوابات إلكترونية آمنة وسريعة، مع إدارة وتأمين ودعم فني مستمر","dEn":"Fast, secure websites and portals — with management, protection and continuous support","ia":["تصميم وتطوير المواقع","البوابات الإلكترونية","الاستضافة والربط","الصيانة والدعم الفني"],"ie":["Website design & build","Digital portals","Hosting & integration","Maintenance & support"]},{"ic":"cpu","n":"04","ar":"الذكاء الاصطناعي والحلول الذكية","en":"AI & Smart Solutions","dAr":"حلول ذكاء اصطناعي مخصصة لتحليل البيانات وأتمتة العمليات ودعم اتخاذ القرار","dEn":"Customized AI for data analysis, process automation and decision support","ia":["تحليل وإدارة البيانات","أتمتة العمليات","أنظمة ذكية مخصصة","حلول مدعومة بالذكاء"],"ie":["Data analysis & management","Process automation","Custom intelligent systems","AI-powered solutions"]},{"ic":"server","n":"05","ar":"البنية التحتية والدعم الفني","en":"Infrastructure & Support","dAr":"بناء وربط البيئة التقنية للمؤسسة — من الأجهزة والشبكات إلى تنصيب الأنظمة وإدارة الأعطال","dEn":"Building and connecting your technical environment — hardware, networks, setup and incident management","ia":["Hardware & Software","الشبكات الداخلية","تنصيب وربط الأنظمة","إدارة الأعطال والبيئة"],"ie":["Hardware & software","Internal networks","System install & integration","Incident & environment mgmt"]}],"sec":[{"ic":"search","ar":"اكتشاف المخاطر","en":"Threat detection","dAr":"مراقبة مستمرة واكتشاف مبكر للتهديدات","dEn":"Continuous monitoring and early threat detection"},{"ic":"shield","ar":"حماية الشبكات","en":"Network security","dAr":"تأمين الشبكات والخوادم والمواقع","dEn":"Securing networks, servers and websites"},{"ic":"lock","ar":"حماية البيانات","en":"Data protection","dAr":"تشفير قواعد البيانات وإدارة الوصول","dEn":"Database encryption and access control"},{"ic":"refresh","ar":"النسخ والاستعادة","en":"Backup & recovery","dAr":"نسخ احتياطي منتظم واستعادة موثوقة","dEn":"Regular backups and reliable recovery"}],"ai":[{"ic":"chart","ar":"تحليل البيانات","en":"Data analysis","dAr":"تحويل البيانات إلى رؤى قابلة للتنفيذ","dEn":"Turning data into actionable insight"},{"ic":"refresh","ar":"أتمتة العمليات","en":"Process automation","dAr":"أتمتة المهام المتكررة وتوفير الوقت","dEn":"Automating repetitive tasks to save time"},{"ic":"cpu","ar":"أنظمة ذكية","en":"Intelligent systems","dAr":"حلول ذكية مبنية حول احتياجك","dEn":"Smart solutions built around your needs"},{"ic":"badge","ar":"دعم القرار","en":"Decision support","dAr":"أنظمة تدعم اتخاذ قرار أفضل وأسرع","dEn":"Systems that support better, faster decisions"}],"work":[{"ic":"filecheck","ar":"نظام مركز تقديم الفيزا الصربي — بغداد","en":"Serbian Visa Center System — Baghdad","g":"Gov · System","dAr":"نظام إلكتروني لإدارة الطلبات والبيانات والمواعيد والعمليات الفنية والإدارية","dEn":"An electronic system managing applications, data, appointments and technical/administrative operations"},{"ic":"users","ar":"CRM لشركة الفخامة للسفر والسياحة","en":"CRM — Luxury Travel & Tourism","g":"CRM · Platform","dAr":"منصة CRM متكاملة لإدارة العملاء والطلبات والعمليات والتقارير الإدارية","dEn":"An integrated CRM platform for customers, requests, operations and reporting"},{"ic":"bars","ar":"نظام إدارة بيانات المرشحين للانتخابات","en":"Electoral Candidate Data System","g":"Data · Analytics","dAr":"منصة متخصصة لبيانات المرشحين والدوائر الانتخابية وتحليل البيانات ودعم القرار","dEn":"A specialized platform for candidate data, districts, analytics and decision support"},{"ic":"archive","ar":"نظام الأرشفة الإلكترونية — شركة كرم الصادق","en":"Electronic Archiving — Karam Al-Sadiq","g":"Archive · Secure","dAr":"نظام أرشفة رقمية للوثائق والملفات مع بحث واسترجاع وإدارة بيانات آمنة","dEn":"A digital archive with search, retrieval and secure data management"},{"ic":"globe","ar":"إدارة وحماية المواقع الإلكترونية","en":"Website Management & Protection","g":"Web · Security","dAr":"إدارة وصيانة وتأمين المواقع مع دعم فني ومراقبة أداء مستمرة","dEn":"Website management, security, support and continuous performance monitoring"}],"why":[{"ic":"users","ar":"كوادر متخصصة","en":"Specialized talent","dAr":"مهندسو أنظمة وخبراء أمن سيبراني ومطورون","dEn":"System engineers, security experts and developers"},{"ic":"badge","ar":"خبرة تقنية","en":"Technical experience","dAr":"خبرة عملية في المشاريع الحكومية والخاصة","dEn":"Hands-on experience across public & private projects"},{"ic":"blocks","ar":"حلول مخصصة","en":"Tailored solutions","dAr":"نبني الحل حول احتياج المؤسسة، لا العكس","dEn":"We build the solution around your needs"},{"ic":"zap","ar":"سرعة الاستجابة","en":"Fast response","dAr":"دعم فني سريع وإدارة أعطال فعّالة","dEn":"Rapid support and effective incident handling"},{"ic":"trend","ar":"أنظمة قابلة للتوسّع","en":"Scalable systems","dAr":"حلول تنمو مع أعمالك دون إعادة بناء","dEn":"Solutions that grow with you — no rebuilds"},{"ic":"lock","ar":"حماية البيانات","en":"Data protection","dAr":"الأمن مدمج في كل نظام نبنيه","dEn":"Security embedded in every system we build"}],"sectors":[{"ic":"building","ar":"الشركات التجارية","en":"Commercial"},{"ic":"plane","ar":"السفر والسياحة","en":"Travel & Tourism"},{"ic":"utensils","ar":"المطاعم والخدمات","en":"Hospitality"},{"ic":"briefcase","ar":"المؤسسات الخاصة","en":"Private sector"},{"ic":"chart","ar":"المشاريع الاستثمارية","en":"Investment"},{"ic":"landmark","ar":"المراكز الإدارية","en":"Administrative"},{"ic":"circuit","ar":"المؤسسات التقنية","en":"Technology"},{"ic":"refresh","ar":"التحول الرقمي","en":"Digital transformation"}],"proc":[{"ic":"search","ar":["نفهم","نفهم احتياجات المؤسسة"],"en":["Understand","We understand your needs"]},{"ic":"chart","ar":["نحلل","نحلل البيئة التقنية والعمليات"],"en":["Analyze","We analyze systems & operations"]},{"ic":"pen","ar":["نصمم","نصمم الحل المناسب"],"en":["Design","We design the right solution"]},{"ic":"code","ar":["نبني","نطوّر النظام أو الحل"],"en":["Build","We develop the system"]},{"ic":"shield","ar":["نؤمّن","نؤمّن الأنظمة والبيانات"],"en":["Secure","We secure systems & data"]},{"ic":"rocket","ar":["ننشر","ننشر الحل ونربطه بالبيئة"],"en":["Deploy","We deploy & integrate it"]},{"ic":"headset","ar":["ندعم","نستمر في الدعم والتطوير"],"en":["Support","We keep supporting & evolving"]}],"about":[{"ic":"code","ar":"التقنية","en":"Technology","dAr":"أنظمة وبرمجيات مخصصة","dEn":"Custom systems & software"},{"ic":"shield","ar":"الأمن السيبراني","en":"Cybersecurity","dAr":"حماية رقمية متقدمة","dEn":"Advanced digital protection"},{"ic":"cpu","ar":"الذكاء الاصطناعي","en":"AI","dAr":"حلول ذكية للبيانات","dEn":"Intelligent data solutions"},{"ic":"refresh","ar":"التحول الرقمي","en":"Transformation","dAr":"أتمتة وتطوير المؤسسات","dEn":"Automation & modernization"}]},"news":[]};</script></head><body><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2365fa"></stop><stop offset="1" stop-color="#31b1fb"></stop></linearGradient>
+</defs></svg>
+
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav">
+  <a class="brand" href="#top">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <b class="lat">LU<i>X</i>URY</b>
+  </a>
+  <div class="nav-c" id="navc">
+    <a href="#top" data-ar="الرئيسية" data-en="Home" data-key="nav.1">الرئيسية</a>
+    <a href="#about" data-ar="من نحن" data-en="About" data-key="nav.2">من نحن</a>
+    <a href="#services" data-ar="خدماتنا" data-en="Services" data-key="nav.3">خدماتنا</a>
+    <a href="#work" data-ar="مشاريعنا" data-en="Work" data-key="nav.4">مشاريعنا</a>
+    <a href="#sectors" data-ar="القطاعات" data-en="Sectors" data-key="nav.5">القطاعات</a>
+    <a href="#contact" data-ar="تواصل" data-en="Contact" data-key="nav.6">تواصل</a>
+  </div>
+  <div class="nav-r">
+    <div class="lang"><button id="arb" class="on" onclick="setLang('ar')">ع</button><button id="enb" onclick="setLang('en')">EN</button></div>
+    <a href="#contact" class="nav-cta" data-ar="ابدأ الآن" data-en="Get Started" data-key="nav.7">ابدأ الآن</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <canvas class="hero-bg" id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <h1 data-rv="">
+        <span data-ar="نصنع التقنية" data-en="We engineer technology" data-key="hero.1">نصنع التقنية</span>
+        <span class="em" data-ar="نحمي المستقبل" data-en="We secure the future" data-key="hero.2">نحمي المستقبل</span>
+      </h1>
+      <p class="hero-lead" data-rv="" data-dl="2" data-ar="حلول تقنية متكاملة، أمن سيبراني متقدم، وذكاء اصطناعي يساعد المؤسسات على بناء مستقبل رقمي أكثر أماناً وكفاءة" data-en="Integrated technology, advanced cybersecurity and artificial intelligence — helping organizations build a safer, more efficient digital future" data-key="hero.3">حلول تقنية متكاملة، أمن سيبراني متقدم، وذكاء اصطناعي يساعد المؤسسات على بناء مستقبل رقمي أكثر أماناً وكفاءة</p>
+      <div class="hero-cta" data-rv="" data-dl="3">
+        <a href="#services" class="btn btn-primary"><span data-ar="اكتشف خدماتنا" data-en="Explore Services" data-key="hero.4">اكتشف خدماتنا</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path class="a" d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a href="#work" class="btn btn-ghost" data-ar="استكشف مشاريعنا" data-en="View Work" data-key="hero.5">استكشف مشاريعنا</a>
+      </div>
+      <div class="hero-trust" data-rv="" data-dl="4">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> <span data-ar="مشاريع حكومية وخاصة" data-en="Public &amp; private projects" data-key="hero.6">مشاريع حكومية وخاصة</span></span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg> <span data-ar="دعم فني ومراقبة على مدار الساعة" data-en="24/7 support &amp; monitoring" data-key="hero.7">دعم فني ومراقبة على مدار الساعة</span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= STRIP ================= -->
+<div class="strip">
+  <div class="wrap">
+    <div class="marquee"><div class="marquee-track" id="strip"></div></div>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap about">
+    <div data-rv="">
+      <span class="eyebrow lat" data-ar="من نحن" data-en="About Us" data-key="about.1">من نحن</span>
+      <h2 class="head" data-ar="نبني الأنظمة التي تُنظّم العمل وتحمي البيانات" data-en="We build the systems that organize work and protect data" data-key="about.2">نبني الأنظمة التي تُنظّم العمل وتحمي البيانات</h2>
+      <p class="sub" data-ar="الفخامة (LUXURY) شركة عراقية مقرها بغداد، متخصصة في تكنولوجيا المعلومات، الأمن السيبراني، تطوير البرمجيات، البنية التحتية التقنية والذكاء الاصطناعي. نعمل مع المؤسسات الحكومية والخاصة لبناء أنظمة موثوقة وآمنة قابلة للتوسّع" data-en="LUXURY is a Baghdad-based Iraqi technology company specialized in IT, cybersecurity, software development, infrastructure and AI. We work with public and private institutions to build reliable, secure and scalable systems" data-key="about.3">الفخامة (LUXURY) شركة عراقية مقرها بغداد، متخصصة في تكنولوجيا المعلومات، الأمن السيبراني، تطوير البرمجيات، البنية التحتية التقنية والذكاء الاصطناعي. نعمل مع المؤسسات الحكومية والخاصة لبناء أنظمة موثوقة وآمنة قابلة للتوسّع</p>
+    </div>
+    <div class="stat-row stagger" id="aboutCards"></div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" style="background:var(--soft)">
+  <div class="wrap">
+    <div class="center" data-rv="">
+      <span class="eyebrow lat" data-ar="خدماتنا" data-en="Services" data-key="services.1">خدماتنا</span>
+      <h2 class="head" data-ar="حلول تقنية مصمّمة للأعمال" data-en="Technology solutions built for business" data-key="services.2">حلول تقنية مصمّمة للأعمال</h2>
+      <p class="sub" data-ar="خمسة مجالات أساسية تغطّي دورة حياة أنظمتك — من التطوير إلى الحماية والدعم" data-en="Five core domains covering the full lifecycle of your systems — from development to protection and support" data-key="services.3">خمسة مجالات أساسية تغطّي دورة حياة أنظمتك — من التطوير إلى الحماية والدعم</p>
+    </div>
+    <div class="cards stagger" id="svcCards" style="margin-top:clamp(34px,4vw,52px)"></div>
+    <div class="cards two stagger" id="svcCards2"></div>
+  </div>
+</section>
+
+<!-- ================= SECURITY ================= -->
+<section id="security">
+  <div class="wrap feat">
+    <div data-rv="">
+      <span class="eyebrow lat" data-ar="الأمن السيبراني" data-en="Cybersecurity" data-key="security.1">الأمن السيبراني</span>
+      <h2 class="head" data-ar="الأمن ليس خياراً. بل جزءٌ من البنية الأساسية" data-en="Security is not an option. It is infrastructure" data-key="security.2">الأمن ليس خياراً. بل جزءٌ من البنية الأساسية</h2>
+      <p class="sub" data-ar="نبني الحماية داخل الأنظمة منذ لحظة تصميمها — من الشبكات والخوادم إلى قواعد البيانات وصلاحيات الوصول" data-en="We build protection into systems from the moment they're designed — from networks and servers to databases and access control" data-key="security.3">نبني الحماية داخل الأنظمة منذ لحظة تصميمها — من الشبكات والخوادم إلى قواعد البيانات وصلاحيات الوصول</p>
+      <div class="chips" id="secChips"></div>
+    </div>
+    <div class="feat-list stagger" id="secList"></div>
+  </div>
+</section>
+
+<!-- ================= AI ================= -->
+<section id="ai" style="background:var(--soft)">
+  <div class="wrap feat">
+    <div class="feat-list stagger" id="aiList"></div>
+    <div data-rv="" data-dl="1">
+      <h2 class="head" data-ar="ذكاء اصطناعي مصمَّم لأعمالك" data-en="Artificial intelligence, built for your business" data-key="ai.1">ذكاء اصطناعي مصمَّم لأعمالك</h2>
+      <p class="sub" data-ar="نطوّر حلول ذكاء اصطناعي مخصصة لتحليل البيانات، أتمتة العمليات، وبناء أنظمة ذكية تدعم اتخاذ القرار داخل المؤسسة" data-en="We develop customized AI solutions for data analysis, process automation and intelligent systems that support decision-making" data-key="ai.2">نطوّر حلول ذكاء اصطناعي مخصصة لتحليل البيانات، أتمتة العمليات، وبناء أنظمة ذكية تدعم اتخاذ القرار داخل المؤسسة</p>
+      <div class="hero-cta" style="margin-top:26px"><a href="#contact" class="btn btn-primary"><span data-ar="اكتشف حلول الذكاء الاصطناعي" data-en="Discover AI Solutions" data-key="ai.3">اكتشف حلول الذكاء الاصطناعي</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path class="a" d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORK ================= -->
+<section id="work">
+  <div class="wrap">
+    <div data-rv="" style="margin-bottom:clamp(30px,4vw,46px)">
+      <span class="eyebrow lat" data-ar="مشاريعنا" data-en="Selected Work" data-key="work.1">مشاريعنا</span>
+      <h2 class="head" data-ar="مشاريع صنعت فرقاً" data-en="Projects that made a difference" data-key="work.2">مشاريع صنعت فرقاً</h2>
+    </div>
+    <div class="work stagger" id="workGrid"></div>
+  </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section id="why" style="background:var(--soft)">
+  <div class="wrap">
+    <div class="center" data-rv="" style="margin-bottom:clamp(30px,4vw,46px)">
+      <span class="eyebrow lat" data-ar="لماذا الفخامة" data-en="Why Luxury" data-key="why.1">لماذا الفخامة</span>
+      <h2 class="head" data-ar="شريك تقني يمكنك الوثوق به" data-en="A technology partner you can trust" data-key="why.2">شريك تقني يمكنك الوثوق به</h2>
+    </div>
+    <div class="why stagger" id="whyGrid"></div>
+  </div>
+</section>
+
+<!-- ================= SECTORS ================= -->
+<section id="sectors">
+  <div class="wrap">
+    <div class="center" data-rv="" style="margin-bottom:clamp(30px,4vw,46px)">
+      <span class="eyebrow lat" data-ar="القطاعات" data-en="Sectors" data-key="sectors.1">القطاعات</span>
+      <h2 class="head" data-ar="نخدم القطاعات التي تعتمد على التقنية" data-en="We serve the sectors that run on technology" data-key="sectors.2">نخدم القطاعات التي تعتمد على التقنية</h2>
+    </div>
+    <div class="sect stagger" id="sectGrid"></div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section id="process" style="background:var(--soft)">
+  <div class="wrap">
+    <div class="center" data-rv="" style="margin-bottom:clamp(34px,4vw,52px)">
+      <span class="eyebrow lat" data-ar="كيف نعمل" data-en="How We Work" data-key="process.1">كيف نعمل</span>
+      <h2 class="head" data-ar="من الفكرة إلى نظام آمن يعمل" data-en="From idea to a secure system in production" data-key="process.2">من الفكرة إلى نظام آمن يعمل</h2>
+    </div>
+    <div class="proc stagger" id="procGrid"></div>
+  </div>
+</section>
+
+<!-- ================= NEWS ================= -->
+<section id="news" data-news-section="" hidden="">
+  <div class="wrap">
+    <div class="center" data-rv="" style="margin-bottom:clamp(30px,4vw,46px)">
+      <span class="eyebrow lat" data-ar="آخر الأخبار" data-en="Latest News" data-key="news.1">آخر الأخبار</span>
+      <h2 class="head" data-ar="جديدنا وتحديثاتنا" data-en="Our latest news and updates" data-key="news.2">جديدنا وتحديثاتنا</h2>
+    </div>
+    <div class="news stagger" id="newsGrid"></div>
+    <div class="center" style="margin-top:clamp(30px,4vw,44px)">
+      <a href="/news" class="btn btn-ghost"><span data-ar="جميع الأخبار" data-en="All News" data-key="news.3">جميع الأخبار</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path class="a" d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+  <div class="wrap ct-grid">
+    <div data-rv="">
+      <span class="eyebrow lat" data-ar="تواصل معنا" data-en="Contact" data-key="contact.1">تواصل معنا</span>
+      <h2 data-ar="لنبنِ الحل المناسب لأعمالك" data-en="Let's build the right solution for your business" data-key="contact.2">لنبنِ الحل المناسب لأعمالك</h2>
+      <p class="lead" data-ar="هل لديك مشروع تقني، نظام يحتاج إلى تطوير، أو بيئة تحتاج إلى حماية؟ دعنا نتحدث" data-en="Have a technology project, a system to build, or an environment to protect? Let's talk" data-key="contact.3">هل لديك مشروع تقني، نظام يحتاج إلى تطوير، أو بيئة تحتاج إلى حماية؟ دعنا نتحدث</p>
+      <div class="ct-info">
+        <div class="ci"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><span data-ar="العراق — بغداد — شارع الأميرات" data-en="Iraq — Baghdad — Al-Amirat Street" data-key="contact.4">العراق — بغداد — شارع الأميرات</span></div>
+        <div class="ci"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span><span class="lat" data-plain-key="contact.email">info@luxury-it.iq</span></div>
+        <div class="ci"><span class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span><span data-ar="التواصل عبر النموذج" data-en="Reach us via the form" data-key="contact.5">التواصل عبر النموذج</span></div>
+      </div>
+    </div>
+    <form class="form" id="cform" novalidate="" data-rv="" data-dl="1">
+      <div class="two">
+        <div class="fld"><label data-ar="الاسم" data-en="Name" data-key="contact.6">الاسم</label><input name="name" required="" autocomplete="name"></div>
+        <div class="fld"><label data-ar="الشركة" data-en="Company" data-key="contact.7">الشركة</label><input name="company" autocomplete="organization"></div>
+      </div>
+      <div class="two">
+        <div class="fld"><label>Email</label><input name="email" type="email" dir="ltr" required="" autocomplete="email"></div>
+        <div class="fld"><label data-ar="الهاتف" data-en="Phone" data-key="contact.8">الهاتف</label><input name="phone" type="tel" dir="ltr" autocomplete="tel"></div>
+      </div>
+      <div class="fld"><label data-ar="الخدمة" data-en="Service" data-key="contact.9">الخدمة</label><select name="service" id="svcSel"></select></div>
+      <div class="fld"><label data-ar="رسالتك" data-en="Message" data-key="contact.10">رسالتك</label><textarea name="message" required=""></textarea></div>
+      <div class="fmsg" id="fmsg"></div>
+      <button type="submit" class="btn btn-primary" style="justify-content:center"><span data-ar="إرسال الطلب" data-en="Send Request" data-key="contact.11">إرسال الطلب</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path class="a" d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="foot">
+    <div>
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <b class="lat">LU<i>X</i>URY</b>
+      </a>
+      <p data-ar="شركة الفخامة لتكنولوجيا المعلومات والأمن السيبراني والحلول الذكية والذكاء الاصطناعي — بغداد، العراق" data-en="LUXURY — Information Technology, Cybersecurity, Smart Solutions &amp; AI. Baghdad, Iraq" data-key="footer.1">شركة الفخامة لتكنولوجيا المعلومات والأمن السيبراني والحلول الذكية والذكاء الاصطناعي — بغداد، العراق</p>
+    </div>
+    <div>
+      <h5 data-ar="روابط" data-en="Navigate" data-key="footer.2">روابط</h5>
+      <a href="#about" data-ar="من نحن" data-en="About" data-key="footer.3">من نحن</a>
+      <a href="#services" data-ar="خدماتنا" data-en="Services" data-key="footer.4">خدماتنا</a>
+      <a href="#work" data-ar="مشاريعنا" data-en="Work" data-key="footer.5">مشاريعنا</a>
+      <a href="#sectors" data-ar="القطاعات" data-en="Sectors" data-key="footer.6">القطاعات</a>
+    </div>
+    <div>
+      <h5 data-ar="خدماتنا" data-en="Services" data-key="footer.7">خدماتنا</h5>
+      <a href="#services" data-ar="تطوير الأنظمة" data-en="Systems" data-key="footer.8">تطوير الأنظمة</a>
+      <a href="#security" data-ar="الأمن السيبراني" data-en="Cybersecurity" data-key="footer.9">الأمن السيبراني</a>
+      <a href="#ai" data-ar="الذكاء الاصطناعي" data-en="AI Solutions" data-key="footer.10">الذكاء الاصطناعي</a>
+      <a href="#services" data-ar="البنية التحتية" data-en="Infrastructure" data-key="footer.11">البنية التحتية</a>
+    </div>
+    <div>
+      <h5 data-ar="تواصل" data-en="Contact" data-key="footer.12">تواصل</h5>
+      <span class="li" data-ar="بغداد — شارع الأميرات" data-en="Baghdad — Al-Amirat St" data-key="footer.13">بغداد — شارع الأميرات</span>
+      <span class="li lat" data-plain-key="footer.email">info@luxury-it.iq</span>
+    </div>
+  </div>
+  <div class="foot-b">
+    <span><span data-plain-key="footer.copyrightPrefix">© 2026 LUXURY</span><span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved" data-key="footer.14">جميع الحقوق محفوظة</span></span>
+    <span class="lat" data-plain-key="footer.tagline">TECHNOLOGY · SECURITY · INTELLIGENCE</span>
+  </div>
+</footer>
+
+<script>
+/* ===== Lucide-style icon paths (inner SVG) ===== */
+const IC={
+ code:'<path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/>',
+ shield:'<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',
+ monitor:'<rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/>',
+ cpu:'<rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/>',
+ server:'<rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01M6 18h.01"/>',
+ users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+ badge:'<path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/>',
+ blocks:'<rect width="7" height="7" x="14" y="3" rx="1"/><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"/>',
+ zap:'<path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>',
+ trend:'<path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/>',
+ lock:'<rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+ building:'<path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/>',
+ plane:'<path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>',
+ utensils:'<path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>',
+ briefcase:'<path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/>',
+ chart:'<path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/>',
+ landmark:'<line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/>',
+ circuit:'<rect width="18" height="18" x="3" y="3" rx="2"/><path d="M11 9h4a2 2 0 0 0 2-2V3"/><circle cx="9" cy="9" r="2"/><path d="M7 21v-4a2 2 0 0 1 2-2h4"/><circle cx="15" cy="15" r="2"/>',
+ refresh:'<path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>',
+ check:'<path d="M20 6 9 17l-5-5"/>',
+ search:'<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+ pen:'<path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>',
+ rocket:'<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>',
+ headset:'<path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a1 1 0 0 1-1-1v-6a9 9 0 0 1 18 0v6a1 1 0 0 1-1 1h-2a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/>',
+ filecheck:'<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/>',
+ bars:'<path d="M3 3v16a2 2 0 0 0 2 2h16"/><rect x="7" y="11" width="3" height="6" rx="1"/><rect x="12" y="7" width="3" height="10" rx="1"/><rect x="17" y="13" width="3" height="4" rx="1"/>',
+ archive:'<rect width="20" height="5" x="2" y="3" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/>',
+ globe:'<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
+ calendar:'<rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/>',
+ arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>'
+};
+function svg(name,cls){return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"${cls?' class="'+cls+'"':''}>${IC[name]}</svg>`;}
+
+/* ===== DATA ===== */
+const SERVICES=window.__SITE__.arrays.services;
+const SEC=window.__SITE__.arrays.sec;
+const AI=window.__SITE__.arrays.ai;
+const WORK=window.__SITE__.arrays.work;
+const WHY=window.__SITE__.arrays.why;
+const SECTORS=window.__SITE__.arrays.sectors;
+const PROC=window.__SITE__.arrays.proc;
+const ABOUT=window.__SITE__.arrays.about;
+const STRIP_IC=["code","shield","monitor","cpu","server"];
+
+/* ===== LANG ===== */
+let LANG="ar";
+function t(el){const v=el.getAttribute("data-"+LANG);if(v!=null){if(/[<&]/.test(v))el.innerHTML=v;else el.textContent=v;}}
+function setLang(l){
+  LANG=l;document.documentElement.lang=l;document.documentElement.dir=(l==="ar")?"rtl":"ltr";
+  document.getElementById("arb").classList.toggle("on",l==="ar");
+  document.getElementById("enb").classList.toggle("on",l==="en");
+  document.querySelectorAll("[data-ar],[data-en]").forEach(t);
+  build();
+}
+
+/* ===== BUILD ===== */
+function build(){
+  const A=LANG==="ar";
+  // strip
+  const stripItems=SERVICES.map((s,i)=>`<span>${svg(STRIP_IC[i])}${A?s.ar.split(" ").slice(0,2).join(" "):s.en}</span>`).join("");
+  document.getElementById("strip").innerHTML=stripItems+stripItems;
+  // about
+  document.getElementById("aboutCards").innerHTML=ABOUT.map(a=>`<div class="mini-card"><div class="tile">${svg(a.ic)}</div><h4>${A?a.ar:a.en}</h4><p>${A?a.dAr:a.dEn}</p></div>`).join("");
+  // services 3 + 2
+  const card=s=>`<div class="card"><div class="tile">${svg(s.ic)}</div><h3>${A?s.ar:s.en}</h3><p>${A?s.dAr:s.dEn}</p><ul>${(A?s.ia:s.ie).map(x=>`<li>${svg("check")}${x}</li>`).join("")}</ul></div>`;
+  document.getElementById("svcCards").innerHTML=SERVICES.slice(0,3).map(card).join("");
+  document.getElementById("svcCards2").innerHTML=SERVICES.slice(3).map(card).join("");
+  // service select
+  const sel=document.getElementById("svcSel");
+  if(sel)sel.innerHTML=`<option value="">${A?'اختر خدمة':'Select a service'}</option>`+SERVICES.map(s=>`<option>${A?s.ar:s.en}</option>`).join("");
+  // security list + chips
+  const flrow=x=>`<div class="fl-row"><div class="tile">${svg(x.ic)}</div><div><div class="t">${A?x.ar:x.en}</div><div class="d">${A?x.dAr:x.dEn}</div></div></div>`;
+  document.getElementById("secList").innerHTML=SEC.map(flrow).join("");
+  document.getElementById("secChips").innerHTML=SEC.map(x=>`<span class="chip">${svg(x.ic)}${A?x.ar:x.en}</span>`).join("");
+  document.getElementById("aiList").innerHTML=AI.map(flrow).join("");
+  // work
+  document.getElementById("workGrid").innerHTML=WORK.map(p=>`<div class="wcard"><div class="no">${svg(p.ic)}</div><div><h3>${A?p.ar:p.en}</h3><p>${A?p.dAr:p.dEn}</p></div></div>`).join("");
+  // why
+  document.getElementById("whyGrid").innerHTML=WHY.map(w=>`<div class="wc"><div class="tile">${svg(w.ic)}</div><h4>${A?w.ar:w.en}</h4><p>${A?w.dAr:w.dEn}</p></div>`).join("");
+  // sectors
+  document.getElementById("sectGrid").innerHTML=SECTORS.map(s=>`<div class="sc"><div class="tile">${svg(s.ic)}</div><span>${A?s.ar:s.en}</span></div>`).join("");
+  // process
+  document.getElementById("procGrid").innerHTML=PROC.map(p=>`<div class="step"><div class="node">${svg(p.ic)}</div><div class="txt"><h4>${A?p.ar[0]:p.en[0]}</h4><p>${A?p.ar[1]:p.en[1]}</p></div></div>`).join("");
+  renderNews();
+  observe();
+}
+
+/* ===== NEWS (home preview) ===== */
+function fmtDate(iso,A){
+  try{return new Date(iso).toLocaleDateString(A?"ar-EG-u-nu-latn":"en-US",{year:"numeric",month:"short",day:"numeric"});}
+  catch(e){return iso;}
+}
+function renderNews(){
+  const sec=document.getElementById("news"),grid=document.getElementById("newsGrid");
+  if(!sec||!grid)return;
+  const A=LANG==="ar";
+  const items=((window.__SITE__&&window.__SITE__.news)||[])
+    .filter(n=>n.published)
+    .sort((a,b)=>new Date(b.date)-new Date(a.date))
+    .slice(0,3);
+  if(!items.length){sec.hidden=true;return;}
+  sec.hidden=false;
+  grid.innerHTML=items.map(n=>{
+    const title=A?n.titleAr:n.titleEn;
+    const body=A?n.bodyAr:n.bodyEn;
+    const excerpt=(body||"").replace(/\s+/g," ").trim().slice(0,120);
+    const cover=n.cover?`<img class="cov" src="${n.cover}" alt="" loading="lazy">`:"";
+    return `<a class="ncard" href="/news/${n.slug}">${cover}<div class="nbody"><span class="ndate">${svg("calendar")} ${fmtDate(n.date,A)}</span><h3>${title}</h3><p>${excerpt}${excerpt.length>=120?"…":""}</p><span class="nmore">${A?"اقرأ المزيد":"Read more"} ${svg("arrow")}</span></div></a>`;
+  }).join("");
+}
+
+/* ===== REVEAL ===== */
+let io;
+function observe(){
+  if(!io)io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.1,rootMargin:"0px 0px -5% 0px"});
+  document.querySelectorAll("[data-rv]:not(.in),.stagger:not(.in)").forEach(el=>io.observe(el));
+}
+
+/* ===== NAV ===== */
+const nav=document.getElementById("nav");
+addEventListener("scroll",()=>nav.classList.toggle("stuck",scrollY>20),{passive:true});
+const bg=document.getElementById("burger"),nc=document.getElementById("navc");
+bg.addEventListener("click",()=>{bg.classList.toggle("x");nc.classList.toggle("open");});
+nc.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{bg.classList.remove("x");nc.classList.remove("open");}));
+
+/* ===== FORM ===== */
+document.getElementById("cform").addEventListener("submit",function(e){
+  e.preventDefault();const f=e.target,m=document.getElementById("fmsg");
+  const nm=f.name.value.trim(),em=f.email.value.trim(),bd=f.message.value.trim();
+  const ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em);m.className="fmsg";
+  if(!nm||!ok||!bd){m.classList.add("err");m.textContent=LANG==="ar"?"يرجى إدخال الاسم وبريد صحيح ورسالتك.":"Please enter your name, a valid email and your message";return;}
+  m.classList.add("ok");m.textContent=LANG==="ar"?"تم استلام طلبك — سنعاود التواصل قريباً. (عرض أمامي)":"Request received — we'll be in touch shortly. (front-end demo)";f.reset();
+});
+
+/* ===== COUNT-UP STATS ===== */
+(function(){
+  const band=document.querySelector(".statband");if(!band)return;
+  const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  const nums=[...band.querySelectorAll(".v[data-count]")];
+  let done=false;
+  const io2=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting&&!done){done=true;io2.disconnect();
+      nums.forEach(el=>{
+        const target=+el.dataset.count,pad=+(el.dataset.pad||0);
+        if(reduce){el.textContent=String(target).padStart(pad,"0");return;}
+        const dur=1300,t0=performance.now();
+        (function tick(now){
+          const p=Math.min((now-t0)/dur,1);
+          const val=Math.round((1-Math.pow(1-p,3))*target);
+          el.textContent=String(val).padStart(pad,"0");
+          if(p<1)requestAnimationFrame(tick);
+        })(t0);
+      });
+    }
+  }),{threshold:.4});
+  io2.observe(band);
+})();
+
+/* ===== HERO BINARY-RAIN BACKGROUND ===== */
+(function(){
+  const canvas=document.getElementById("heroCanvas");if(!canvas)return;
+  const ctx=canvas.getContext("2d");
+  const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  const chars="01";
+  let w,h,dpr,fontSize,cols,rows,drops,skip,timer;
+  function pickFontSize(){
+    return w<420?12:w<720?14:w<1100?16:18;
+  }
+  function resize(){
+    dpr=Math.min(devicePixelRatio||1,2);
+    w=canvas.clientWidth;h=canvas.clientHeight;
+    canvas.width=Math.max(1,Math.round(w*dpr));canvas.height=Math.max(1,Math.round(h*dpr));
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    fontSize=pickFontSize();
+    ctx.font=fontSize+"px ui-monospace,'SF Mono','JetBrains Mono',Consolas,monospace";
+    ctx.textAlign="center";ctx.textBaseline="top";
+    cols=Math.ceil(w/fontSize);rows=Math.ceil(h/fontSize);
+    drops=Array.from({length:cols},()=>Math.floor(Math.random()*(rows+20))-10);
+    skip=Array.from({length:cols},()=>.06+Math.random()*.22);
+    ctx.fillStyle="#fff";ctx.fillRect(0,0,w,h);
+  }
+  resize();
+  let resizeT;
+  const onResize=()=>{
+    clearTimeout(resizeT);
+    resizeT=setTimeout(()=>{clearTimeout(timer);resize();if(!reduce)timer=setTimeout(tick,55);},120);
+  };
+  window.addEventListener("resize",onResize);
+  if("ResizeObserver" in window){
+    new ResizeObserver(onResize).observe(canvas.parentElement);
+  }
+  if(reduce)return;
+  function tick(){
+    ctx.fillStyle="rgba(255,255,255,.12)";
+    ctx.fillRect(0,0,w,h);
+    for(let i=0;i<cols;i++){
+      if(Math.random()<skip[i])continue;
+      const y=drops[i]*fontSize;
+      if(y>=-fontSize&&y<=h){
+        const ch=chars[Math.random()<.5?0:1];
+        const head=Math.random()<.16;
+        ctx.fillStyle=head?"rgba(6,26,69,.92)":"rgba(35,101,250,.5)";
+        ctx.fillText(ch,i*fontSize+fontSize/2,y);
+      }
+      drops[i]++;
+      if(y>h&&Math.random()>.9){drops[i]=Math.floor(Math.random()*-15);skip[i]=.06+Math.random()*.22;}
+    }
+    timer=setTimeout(tick,55);
+  }
+  timer=setTimeout(tick,55);
+})();
+
+setLang("ar");observe();
+</script>
+</body></html>
